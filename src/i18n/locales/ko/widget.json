@@ -1,0 +1,210 @@
+{
+  "image": {
+    "id": "image",
+    "name": "이미지"
+  },
+  "colorPalette": {
+    "id": "colorPalette",
+    "name": "색",
+    "opacity": {
+      "name": "투명도"
+    },
+    "brightness": {
+      "name": "밝기"
+    },
+    "grayScale": {
+      "name": "흑백"
+    },
+    "addColor": {
+      "name": "색 추가"
+    },
+    "clearColor": {
+      "name": "색 제거\n(shift와 함께 클릭시 아웃라인 변경)"
+    }
+  },
+  "align": {
+    "id": "align",
+    "name": "정렬",
+    "left": {
+      "name": "왼쪽"
+    },
+    "center": {
+      "name": "수평 중앙"
+    },
+    "right": {
+      "name": "오른쪽"
+    },
+    "top": {
+      "name": "위"
+    },
+    "middle": {
+      "name": "수직 중앙"
+    },
+    "bottom": {
+      "name": "아래"
+    }
+  },
+  "frame": {
+    "id": "frame",
+    "name": "프레임",
+    "youtubeVideoThumbnail": {
+      "name": "유튜브 비디오 썸네일",
+      "id": "youtubeVideoThumbnail",
+      "width": 1280,
+      "height": 760
+    },
+    "youtubeChannelIcon": {
+      "name": "유튜브 채널 아이콘",
+      "id": "youtubeChannelIcon",
+      "width": 800,
+      "height": 800
+    },
+    "youtubeChannelCover": {
+      "name": "유튜브 채널 커버",
+      "id": "youtubeChannelCover",
+      "width": 2560,
+      "height": 1440
+    },
+    "instagramSquarePhoto": {
+      "name": "인스타그램 포스트",
+      "id": "instagramSquarePhoto",
+      "width": 1080,
+      "height": 1080
+    },
+    "instagramProfile": {
+      "name": "인스타그램 프로필",
+      "id": "instagramProfile",
+      "width": 110,
+      "height": 110
+    },
+    "instagramStory": {
+      "name": "인스타그램 스토리",
+      "id": "instagramStory",
+      "width": 1080,
+      "height": 1920
+    },
+    "A4": {
+      "name": "A4",
+      "id": "A4",
+      "width": 2480,
+      "height": 3508
+    },
+    "sample_100X100": {
+      "name": "100픽셀 정사각형",
+      "id": "sample_100X100",
+      "width": 100,
+      "height": 100
+    },
+    "sample_512X512": {
+      "name": "512픽셀 정사각형",
+      "id": "sample_512X512",
+      "width": 512,
+      "height": 512
+    },
+    "facebookProfile": {
+      "name": "페이스북 프로필",
+      "id": "facebookProfile",
+      "width": 180,
+      "height": 180
+    },
+    "facebookCoverPhoto": {
+      "name": "페이스북 커버",
+      "id": "facebookCoverPhoto",
+      "width": 820,
+      "height": 312
+    },
+    "twitterProfile": {
+      "name": "트위터 프로필",
+      "id": "twitterProfile",
+      "width": 400,
+      "height": 400
+    },
+    "twitterHeader": {
+      "name": "트위터 헤더",
+      "id": "twitterHeader",
+      "width": 1500,
+      "height": 500
+    },
+    "twitterPost": {
+      "name": "트위터 포스트",
+      "id": "twitterPost",
+      "width": 900,
+      "height": 450
+    },
+    "linkedInProfil": {
+      "name": "링크드인 프로필",
+      "id": "linkedInProfil",
+      "width": 400,
+      "height": 400
+    },
+    "linkedInCover": {
+      "name": "링크드인 커버",
+      "id": "linkedInCover",
+      "width": 1584,
+      "height": 396
+    },
+    "pinterestBoardImage": {
+      "name": "핀터레스트 보드",
+      "id": "pinterestBoardImage",
+      "width": 222,
+      "height": 150
+    },
+    "pinterestPinImage": {
+      "name": "핀터레스트 핀",
+      "id": "pinterestPinImage",
+      "width": 236,
+      "height": 280
+    },
+    "pinterestProfile": {
+      "name": "핀터레스트 프로필",
+      "id": "pinterestProfile",
+      "width": 165,
+      "height": 165
+    },
+    "tumblrProfile": {
+      "name": "텀블러 프로필",
+      "id": "tumblrProfile",
+      "width": 128,
+      "height": 128
+    },
+    "tumblrPostImage": {
+      "name": "텀블러 포스트",
+      "id": "tumblrPostImage",
+      "width": 500,
+      "height": 750
+    }
+  },
+  "shape": {
+    "id": "shape",
+    "name": "도형"
+  },
+  "text": {
+    "id": "text",
+    "name": "글자"
+  },
+  "icon": {
+    "id": "icon",
+    "name": "아이콘",
+    "search": {
+      "title": "아이콘 검색",
+      "placeholder": "키워드(영어)",
+      "desc": "키워드로 아이콘을 검색하세요"
+    }
+  },
+  "export": {
+    "id": "export",
+    "name": "내보내기",
+    "export-all-frame": {
+      "type": "export",
+      "id": "export-all-frame",
+      "name": "모든 프레임 내보내기",
+      "icon": "download"
+    },
+    "export-selected": {
+      "type": "export",
+      "id": "export-selected",
+      "name": "선택한 프레임 내보내기",
+      "icon": "box-arrow-down"
+    }
+  }
+}

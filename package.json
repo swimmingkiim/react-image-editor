@@ -1,0 +1,88 @@
+{
+  "name": "react-image-editor",
+  "version": "0.1.0",
+  "description": "React + Konva / image editor / like Figma or Canva",
+  "homepage": "https://github.com/swimmingkiim/react-image-editor",
+  "bugs": "https://github.com/swimmingkiim/react-image-editor/issues",
+  "author": "swimmingkiim <swimmingkiim@gmail.com>",
+  "repository": "https://github.com/swimmingkiim/react-image-editor.git",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "@tensorflow-models/deeplab": "^0.2.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/jest": "^28.1.3",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
+    "holderjs": "^2.9.9",
+    "i18next": "^21.8.11",
+    "konva": "^8.3.10",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.4.0",
+    "react-bootstrap-range-slider": "^3.0.8",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.2.0",
+    "react-ga4": "^1.4.1",
+    "react-hotkeys-hook": "^3.4.6",
+    "react-i18next": "^11.17.3",
+    "react-konva": "^18.2.1",
+    "react-redux": "^8.0.2",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-observable": "^2.0.0",
+    "rxjs": "^7.5.5",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4",
+    "nanoid": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "serve": "serve -s -c ./serve.json -l 3000",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tensorflow/tfjs-backend-cpu": "^3.18.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.18.0",
+    "@tensorflow/tfjs-converter": "^3.18.0",
+    "@tensorflow/tfjs-core": "^3.18.0",
+    "@types/holderjs": "^2.9.2",
+    "@types/react-color": "^3.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "i": "^0.3.7",
+    "normalizr": "^3.6.2",
+    "npm": "^8.13.1",
+    "reselect": "^4.1.6"
+  }
+}

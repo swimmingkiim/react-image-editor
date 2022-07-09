@@ -1,0 +1,115 @@
+[
+  {
+    "id": "file-1",
+    "data": [
+      {
+        "id": "78coJjYhJhc9VQOAj3DyF",
+        "attrs": {
+          "name": "label-target",
+          "data-item-type": "frame",
+          "data-frame-type": "Youtube Video Thumbnail",
+          "width": 1280,
+          "height": 760,
+          "fill": "#ffffff",
+          "x": 19.168712730692278,
+          "y": 57.499145296581275,
+          "zIndex": 0,
+          "brightness": 0,
+          "updatedAt": 1648525979355,
+          "id": "78coJjYhJhc9VQOAj3DyF",
+          "opacity": 1,
+          "filters": [
+            null
+          ],
+          "draggable": true,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "skewX": 0,
+          "skewY": 0
+        },
+        "className": "sample-frame",
+        "children": []
+      },
+      {
+        "id": "ezD-gbcWxbVS6qEtt7e0L",
+        "attrs": {
+          "name": "label-target",
+          "data-item-type": "image",
+          "x": 13.43965546833357,
+          "y": 50.39925579583252,
+          "width": 512,
+          "height": 320,
+          "src": "find:LdygWYCzE1zg4Q0FqaFlf",
+          "zIndex": 0,
+          "brightness": 0,
+          "_filters": [
+            "Brighten",
+            "Grayscale",
+            "Grayscale"
+          ],
+          "updatedAt": 1648525991247,
+          "image": {},
+          "data-frame-type": "image",
+          "id": "ezD-gbcWxbVS6qEtt7e0L",
+          "fill": "transparent",
+          "opacity": 1,
+          "rotation": 0,
+          "filters": [
+            null,
+            null,
+            null
+          ],
+          "draggable": true,
+          "scaleX": 2.5275796797500503,
+          "scaleY": 2.5275796797500503,
+          "offsetX": 0,
+          "offsetY": 0,
+          "skewX": 0,
+          "skewY": 0
+        },
+        "className": "sample-image",
+        "children": []
+      },
+      {
+        "id": "kKWhE40rp0noetRz9eb2A",
+        "attrs": {
+          "name": "label-target",
+          "data-item-type": "text",
+          "width": 179.99835404475618,
+          "height": 72,
+          "fill": "#f8e71c",
+          "x": 27.97315804319271,
+          "y": 185.01861469017393,
+          "fontSize": 30,
+          "fontFamily": "'Do Hyeon', sans-serif",
+          "text": "MOTIVATION\nSPEECH",
+          "textAlign": "left",
+          "verticalAlign": "top",
+          "zIndex": 0,
+          "brightness": 0,
+          "updatedAt": 1648526851834,
+          "data-frame-type": "text",
+          "id": "kKWhE40rp0noetRz9eb2A",
+          "align": "center",
+          "opacity": 1,
+          "rotation": 0,
+          "draggable": true,
+          "scaleX": 7.0133480724001975,
+          "scaleY": 7.013348072400204,
+          "skewX": 0,
+          "skewY": 0,
+          "visible": true,
+          "offsetX": 0,
+          "offsetY": 0,
+          "stroke": "#404040",
+          "strokeWidth": 1
+        },
+        "className": "sample-text",
+        "children": []
+      }
+    ]
+  }
+]

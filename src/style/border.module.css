@@ -1,0 +1,157 @@
+@import "../style/theme.module.css";
+
+.roundSM {
+    border-radius: 1em;
+}
+
+.roundMD {
+    border-radius: 1em;
+}
+
+.roundLG {
+    border-radius: 50%;
+}
+
+.roundTopSM {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+.roundLeftSM {
+    border-start-start-radius: 1em;
+}
+
+.roundRightSM {
+    border-end-end-radius: 1em;
+}
+
+.roundBottomSM {
+    border-bottom-left-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+}
+
+.outroundTopSM {
+    position: relative;
+}
+
+.outroundTopSM::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top-right-radius: 1em 1em;
+}
+
+.outroundTopSM::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top-left-radius: 1em 1em;
+}
+
+.outroundLeftSM {
+    position: relative;
+}
+
+.outroundRightSM {
+    border-end-end-radius: -1em;
+}
+
+.outroundBottomSM {
+    position: relative;
+}
+
+.outroundBottomSM::before {
+    width: 1em;
+    height: 1em;
+    content: "";
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    border-bottom-left-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;
+    border-left: 0.75em solid var(--color-white);
+    transform: scaleX(-1);
+}
+
+.outroundBottomSM::after {
+    width: 1em;
+    height: 1em;
+    content: "";
+    position: absolute;
+    right: -0.5em;
+    bottom: -1px;
+    border-bottom-left-radius: 1em 1em;
+    border-top-right-radius: 1em 1em;
+    border-left: 0.75em solid var(--color-grey);
+}
+
+.outroundBottomSM[data-active="true"]::before {
+    z-index: 2;
+    border-color: var(--color-grey);
+}
+
+.outroundBottomSM[data-active="false"]::before {
+    display: none;
+}
+
+.outroundBottomSM[data-active="true"]::after {
+    z-index: 2;
+    border-color: var(--color-grey);
+}
+
+.outroundBottomSM[data-active="false"]::after {
+    border-color: var(--color-white);
+}
+
+.top {
+    border-top: 1px solid var(--color-grey);
+}
+
+.left {
+    border-left: 1px solid var(--color-grey);
+}
+
+.right {
+    border-right: 1px solid var(--color-grey);
+}
+
+.bottom {
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.all {
+    border: 1px solid var(--color-grey);
+}
+
+.none {
+    border: none !important;
+}
+
+.none:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hilightOnFocus[data-active="true"] {
+    box-shadow: -1px -1px var(--color-contrast);
+}
+
+.hilightOnFocus[data-active="false"] {
+    box-shadow: none;
+}
+
+.colorDark {
+    border-color: var(--color-dark);
+}
+
+.colorWhite {
+    border-color: var(--color-white);
+}
+
+.colorGrey {
+    border-color: var(--color-grey);
+}
+
+.colorContrast {
+    border-color: var(--color-contrast);
+}

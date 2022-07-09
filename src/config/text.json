@@ -1,0 +1,236 @@
+[
+  {
+    "type": "text",
+    "id": "sample-text-1",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "serif",
+    "text": "hello world!"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-2",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Fira Mono', monospace",
+    "text": "hello world!"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-3",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Hurricane', cursive",
+    "text": "hello world!"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-4",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'League Gothic', sans-serif",
+    "text": "hello world!"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-5",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Roboto Slab', serif",
+    "text": "hello world!"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-6",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Nanum Gothic', sans-serif",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-7",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Do Hyeon', sans-serif",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-8",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Gamja Flower', cursive",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-9",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Jua', sans-serif",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-10",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Noto Sans KR', sans-serif",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-11",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Noto Serif KR', serif",
+    "text": "안녕하세요"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-12",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Ma Shan Zheng', cursive",
+    "text": "你是我的朋友"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-13",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Noto Serif SC', serif",
+    "text": "你是我的朋友"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-14",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'ZCOOL KuaiLe', cursive",
+    "text": "你是我的朋友"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-15",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'M PLUS 1', sans-serif",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-16",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Noto Sans JP', sans-serif",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-17",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Noto Serif JP', serif",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-18",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Rampart One', cursive",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-19",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Yuji Hentaigana Akebono', cursive",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-20",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Zen Kurenaido', sans-serif",
+    "text": "今日は気持ちいい"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-21",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Anton', sans-serif",
+    "text": "bầu trời màu xanh"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-22",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Dancing Script', cursive",
+    "text": "bầu trời màu xanh"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-23",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Inconsolata', monospace",
+    "text": "bầu trời màu xanh"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-24",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Open Sans', sans-serif",
+    "text": "bầu trời màu xanh"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-25",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Playfair Display', serif",
+    "text": "bầu trời màu xanh"
+  },
+  {
+    "type": "text",
+    "id": "sample-text-26",
+    "width": 250,
+    "height": 35,
+    "fontSize": 30,
+    "fontFamily": "'Roboto Mono', monospace",
+    "text": "bầu trời màu xanh"
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "image": {
+    "id": "image",
+    "name": "Image"
+  },
+  "colorPalette": {
+    "id": "colorPalette",
+    "name": "Color Palette",
+    "opacity": {
+      "name": "Opacity"
+    },
+    "brightness": {
+      "name": "Brightness"
+    },
+    "grayScale": {
+      "name": "Gray Scale"
+    },
+    "addColor": {
+      "name": "Add color"
+    },
+    "clearColor": {
+      "name": "Remove color\n(Press shift to change outline color)"
+    }
+  },
+  "align": {
+    "id": "align",
+    "name": "Align",
+    "left": {
+      "name": "left"
+    },
+    "center": {
+      "name": "center"
+    },
+    "right": {
+      "name": "right"
+    },
+    "top": {
+      "name": "top"
+    },
+    "middle": {
+      "name": "middle"
+    },
+    "bottom": {
+      "name": "bottom"
+    }
+  },
+  "frame": {
+    "id": "frame",
+    "name": "Frame",
+    "youtubeVideoThumbnail": {
+      "name": "Youtube Video Thumbnail",
+      "id": "youtubeVideoThumbnail",
+      "width": 1280,
+      "height": 760
+    },
+    "youtubeChannelIcon": {
+      "name": "Youtube Channel Icon",
+      "id": "youtubeChannelIcon",
+      "width": 800,
+      "height": 800
+    },
+    "youtubeChannelCover": {
+      "name": "Youtube Channel Cover",
+      "id": "youtubeChannelCover",
+      "width": 2560,
+      "height": 1440
+    },
+    "instagramSquarePhoto": {
+      "name": "Instagram Square Photo",
+      "id": "instagramSquarePhoto",
+      "width": 1080,
+      "height": 1080
+    },
+    "instagramProfile": {
+      "name": "Instagram Profile",
+      "id": "instagramProfile",
+      "width": 110,
+      "height": 110
+    },
+    "instagramStory": {
+      "name": "Instagram Story",
+      "id": "instagramStory",
+      "width": 1080,
+      "height": 1920
+    },
+    "A4": {
+      "name": "A4",
+      "id": "A4",
+      "width": 2480,
+      "height": 3508
+    },
+    "sample_100X100": {
+      "name": "sample_100X100",
+      "id": "sample_100X100",
+      "width": 100,
+      "height": 100
+    },
+    "sample_512X512": {
+      "name": "sample_512X512",
+      "id": "sample_512X512",
+      "width": 512,
+      "height": 512
+    },
+    "facebookProfile": {
+      "name": "Facebook Profile",
+      "id": "facebookProfile",
+      "width": 180,
+      "height": 180
+    },
+    "facebookCoverPhoto": {
+      "name": "Facebook Cover Photo",
+      "id": "facebookCoverPhoto",
+      "width": 820,
+      "height": 312
+    },
+    "twitterProfile": {
+      "name": "Twitter Profile",
+      "id": "twitterProfile",
+      "width": 400,
+      "height": 400
+    },
+    "twitterHeader": {
+      "name": "Twitter Header",
+      "id": "twitterHeader",
+      "width": 1500,
+      "height": 500
+    },
+    "twitterPost": {
+      "name": "Twitter Post",
+      "id": "twitterPost",
+      "width": 900,
+      "height": 450
+    },
+    "linkedInProfil": {
+      "name": "LinkedIn Profile",
+      "id": "linkedInProfil",
+      "width": 400,
+      "height": 400
+    },
+    "linkedInCover": {
+      "name": "LinkedIn Cover",
+      "id": "linkedInCover",
+      "width": 1584,
+      "height": 396
+    },
+    "pinterestBoardImage": {
+      "name": "Pinterest Board Image",
+      "id": "pinterestBoardImage",
+      "width": 222,
+      "height": 150
+    },
+    "pinterestPinImage": {
+      "name": "Pinterest Pin Image",
+      "id": "pinterestPinImage",
+      "width": 236,
+      "height": 280
+    },
+    "pinterestProfile": {
+      "name": "Pinterest Profile",
+      "id": "pinterestProfile",
+      "width": 165,
+      "height": 165
+    },
+    "tumblrProfile": {
+      "name": "Tumblr Profile",
+      "id": "tumblrProfile",
+      "width": 128,
+      "height": 128
+    },
+    "tumblrPostImage": {
+      "name": "Tumblr Post Image",
+      "id": "tumblrPostImage",
+      "width": 500,
+      "height": 750
+    }
+  },
+  "shape": {
+    "id": "shape",
+    "name": "Shape"
+  },
+  "text": {
+    "id": "text",
+    "name": "Text"
+  },
+  "icon": {
+    "id": "icon",
+    "name": "Icon",
+    "search": {
+      "title": "Search Icon",
+      "placeholder": "Enter keyword",
+      "desc": "Type a keyword to find icon"
+    }
+  },
+  "export": {
+    "id": "export",
+    "name": "Export",
+    "export-all-frame": {
+      "type": "export",
+      "id": "export-all-frame",
+      "name": "Export All Frame",
+      "icon": "download"
+    },
+    "export-selected": {
+      "type": "export",
+      "id": "export-selected",
+      "name": "Export Selected Frame",
+      "icon": "box-arrow-down"
+    }
+  }
+}

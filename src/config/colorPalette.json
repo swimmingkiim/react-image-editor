@@ -1,0 +1,22 @@
+[
+  {
+    "type": "color",
+    "id": "white",
+    "colorCode": "#FFFFFF"
+  },
+  {
+    "type": "color",
+    "id": "black",
+    "colorCode": "#000000"
+  },
+  {
+    "type": "color",
+    "id": "grey",
+    "colorCode": "#404040"
+  },
+  {
+    "type": "color",
+    "id": "purple",
+    "colorCode": "#272755"
+  }
+]

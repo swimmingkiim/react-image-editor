@@ -1,0 +1,47 @@
+.absoluteCenter {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fromStartBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.fromTopCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fromBottomCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.wrapTrue {
+    flex-wrap: wrap;
+}
+
+.wrapFalse {
+    flex-wrap: nowrap;
+}

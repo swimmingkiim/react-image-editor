@@ -1,0 +1,71 @@
+.height5 {
+    height: 5% !important;
+}
+
+.height10 {
+    height: 10% !important;
+}
+
+.height50 {
+    height: 50% !important;
+}
+
+.height80 {
+    height: 80% !important;
+}
+
+.height90 {
+    height: 90% !important;
+}
+
+.height100 {
+    height: 100% !important;
+}
+
+.width2_5 {
+    width: 2.5% !important;
+}
+
+.width-fit {
+    width: fit-content;
+}
+
+.width5 {
+    width: 5% !important;
+}
+
+.width10 {
+    width: 10% !important;
+}
+
+.width25 {
+    width: 25% !important;
+}
+
+.width50 {
+    width: 50% !important;
+}
+
+.width80 {
+    width: 80% !important;
+}
+
+.width100 {
+    width: 100% !important;
+}
+
+.widthLogo {
+    width: 70px !important;
+}
+
+.mx-h-30vh {
+    max-height: 30vh;
+}
+
+.mx-h-40vh {
+    max-height: 40vh;
+}
+
+.min-h-35vh {
+    min-height: 35vh;
+}

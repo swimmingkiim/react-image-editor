@@ -1,0 +1,20 @@
+[
+  {
+    "type": "line",
+    "id": "straight-plain",
+    "name": "straight-plain",
+    "icon": "dash"
+  },
+  {
+    "type": "line",
+    "id": "one-curve-plain",
+    "name": "one-curve-plain",
+    "icon": "bezier"
+  },
+  {
+    "type": "line",
+    "id": "two-curve-plain",
+    "name": "two-curve-plain",
+    "icon": "bezier2"
+  }
+]

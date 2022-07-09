@@ -1,0 +1,194 @@
+[
+  {
+    "type": "image",
+    "id": "sample-image-1",
+    "name": "sample-image-1",
+    "src": "sitting-1.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-2",
+    "name": "sample-image-2",
+    "src": "sitting-2.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-3",
+    "name": "sample-image-3",
+    "src": "sitting-3.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-4",
+    "name": "sample-image-4",
+    "src": "sitting-4.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-5",
+    "name": "sample-image-5",
+    "src": "sitting-5.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-6",
+    "name": "sample-image-6",
+    "src": "sitting-6.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-7",
+    "name": "sample-image-7",
+    "src": "sitting-7.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-8",
+    "name": "sample-image-8",
+    "src": "sitting-8.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-9",
+    "name": "sample-image-9",
+    "src": "standing-1.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-10",
+    "name": "sample-image-10",
+    "src": "standing-10.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-11",
+    "name": "sample-image-11",
+    "src": "standing-11.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-12",
+    "name": "sample-image-12",
+    "src": "standing-12.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-13",
+    "name": "sample-image-13",
+    "src": "standing-13.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-14",
+    "name": "sample-image-14",
+    "src": "standing-14.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-15",
+    "name": "sample-image-15",
+    "src": "standing-15.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-16",
+    "name": "sample-image-16",
+    "src": "standing-16.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-17",
+    "name": "sample-image-17",
+    "src": "standing-17.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-18",
+    "name": "sample-image-18",
+    "src": "standing-18.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-19",
+    "name": "sample-image-19",
+    "src": "standing-19.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-20",
+    "name": "sample-image-20",
+    "src": "standing-2.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-21",
+    "name": "sample-image-21",
+    "src": "standing-20.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-22",
+    "name": "sample-image-22",
+    "src": "standing-21.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-23",
+    "name": "sample-image-23",
+    "src": "standing-22.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-24",
+    "name": "sample-image-24",
+    "src": "standing-23.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-25",
+    "name": "sample-image-25",
+    "src": "standing-24.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-26",
+    "name": "sample-image-26",
+    "src": "standing-3.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-27",
+    "name": "sample-image-27",
+    "src": "standing-4.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-28",
+    "name": "sample-image-28",
+    "src": "standing-5.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-29",
+    "name": "sample-image-29",
+    "src": "standing-6.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-30",
+    "name": "sample-image-30",
+    "src": "standing-7.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-31",
+    "name": "sample-image-31",
+    "src": "standing-8.svg"
+  },
+  {
+    "type": "image",
+    "id": "sample-image-32",
+    "name": "sample-image-32",
+    "src": "standing-9.svg"
+  }
+]

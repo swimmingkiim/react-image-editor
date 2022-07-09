@@ -1,0 +1,56 @@
+{
+  "select-all": {
+    "id": "select-all",
+    "name": "모든 아이템 선택하기",
+    "desc": "모든 아이템 선택하기",
+    "icon": "bounding-box"
+  },
+  "flip-horizontally": {
+    "id": "flip-horizontally",
+    "name": "선택한 아이템 수평 반전",
+    "desc": "선택한 아이템 수평 반전",
+    "icon": "arrow-left-right"
+  },
+  "flip-vertically": {
+    "id": "flip-vertically",
+    "name": "선택한 아이템 수직 반전",
+    "desc": "선택한 아이템 수평 반전",
+    "icon": "arrow-down-up"
+  },
+  "reset-zoom": {
+    "id": "reset-zoom",
+    "name": "화면 확대",
+    "desc": "화면 확대",
+    "icon": "arrows-fullscreen"
+  },
+  "zoom-in": {
+    "id": "zoom-in",
+    "name": "화면 확대",
+    "desc": "화면 확대",
+    "icon": "arrows-angle-expand"
+  },
+  "zoom-out": {
+    "id": "zoom-out",
+    "name": "화면 축소",
+    "desc": "화면 축소",
+    "icon": "arrows-angle-contract"
+  },
+  "layer-up": {
+    "id": "layer-up",
+    "name": "레이어 올리기",
+    "desc": "레이어 올리기",
+    "icon": "front"
+  },
+  "layer-down": {
+    "id": "layer-down",
+    "name": "레이어 내리기",
+    "desc": "레이어 내리기",
+    "icon": "back"
+  },
+  "hotkey": {
+    "id": "hotkey",
+    "name": "키보드 단축키",
+    "desc": "키보드 단축키",
+    "icon": "keyboard-fill"
+  }
+}

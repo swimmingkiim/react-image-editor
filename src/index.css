@@ -1,0 +1,25 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+/* eng font */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Hurricane&family=League+Gothic&family=Roboto+Slab:wght@100&display=swap");
+/* korean font */
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gamja+Flower&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100&family=Noto+Serif+KR:wght@300&display=swap");
+/* japanese font */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Noto+Sans+JP:wght@300&family=Noto+Serif+JP&family=Rampart+One&family=Yuji+Hentaigana+Akebono&family=Zen+Kurenaido&display=swap");
+/* simplified chinese font */
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC&family=ZCOOL+KuaiLe&display=swap");
+/* original chinese font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@300&display=swap");
+/* vietnamese font */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@500&family=Inconsolata:wght@300&family=Open+Sans&family=Playfair+Display:ital@1&family=Roboto+Mono:wght@300&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    background-color: var(--color-dark) !important;
+    overflow: hidden;
+}

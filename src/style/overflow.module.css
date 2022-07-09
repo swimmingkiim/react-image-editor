@@ -1,0 +1,15 @@
+.auto {
+    overflow: auto;
+}
+
+.auto-y {
+    overflow-y: auto;
+}
+
+.auto-x {
+    overflow-x: auto;
+}
+
+.hide {
+    overflow: hidden;
+}

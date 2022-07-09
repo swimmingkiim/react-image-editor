@@ -1,0 +1,33 @@
+[
+  {
+    "type": "align",
+    "id": "left",
+    "icon": "align-start"
+  },
+  {
+    "type": "align",
+    "id": "center",
+    "icon": "align-center"
+  },
+  {
+    "type": "align",
+    "id": "right",
+    "icon": "align-end"
+  },
+  {
+    "type": "align",
+    "id": "top",
+    "icon": "align-top"
+  },
+  {
+    "type": "align",
+    "id": "middle",
+    "icon": "align-middle"
+  },
+  {
+    "type": "align",
+    "id": "bottom",
+    "icon": "align-bottom"
+  }
+]
+  
