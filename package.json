@@ -2,7 +2,7 @@
   "name": "react-image-editor",
   "version": "0.1.0",
   "description": "React + Konva / image editor / like Figma or Canva",
-  "homepage": "https://github.com/swimmingkiim/react-image-editor",
+  "homepage": "https://swimmingkiim.github.io/react-image-editor",
   "bugs": "https://github.com/swimmingkiim/react-image-editor/issues",
   "author": "swimmingkiim <swimmingkiim@gmail.com>",
   "repository": "https://github.com/swimmingkiim/react-image-editor.git",
