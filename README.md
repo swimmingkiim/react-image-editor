@@ -1,4 +1,4 @@
-# Online Image Maker
+# React Image Editor
 
 ## How to Run Project
 
