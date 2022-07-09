@@ -2,7 +2,7 @@ import { Group } from 'konva/lib/Group';
 import { Node, NodeConfig } from 'konva/lib/Node';
 import { nanoid } from 'nanoid';
 import React from 'react';
-import { StageData } from '../redux/curretStageData';
+import { StageData } from '../redux/currentStageData';
 import useItem from './useItem';
 import useLocalStorage from './useLocalStorage';
 import useSelection from './useSelection';

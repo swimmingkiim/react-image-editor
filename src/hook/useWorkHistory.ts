@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { StageData } from '../redux/curretStageData';
+import { StageData } from '../redux/currentStageData';
 import useItem from './useItem';
 
 const useWorkHistory = (
@@ -8,7 +8,7 @@ const useWorkHistory = (
   setPast: React.Dispatch<React.SetStateAction<StageData[][]>>,
   setFuture: React.Dispatch<React.SetStateAction<StageData[][]>>,
 ) => {
-  const { stageData, alterItems } = useItem();
+  const { alterItems } = useItem();
   const [current, setCurrent] = useState<StageData[] | null>(null);
 
   const goToPast = useCallback(() => {

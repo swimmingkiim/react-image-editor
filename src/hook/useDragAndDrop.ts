@@ -11,9 +11,7 @@ import useItem from './useItem';
 
 import TRIGGER from '../config/trigger';
 import { DropCallback } from '../util/eventHandler/dragAndDrop';
-import { StageData } from '../redux/curretStageData';
-import useLocalStorage from './useLocalStorage';
-import useImageAsset from './useImageAsset';
+import { StageData } from '../redux/currentStageData';
 
 const useDragAndDrop = (
     stageRef: MutableRefObject<Konva.Stage>,
@@ -56,13 +54,11 @@ const useDragAndDrop = (
             if (imageSrc.width > imageSrc.height) {
                 width = decimalUpToSeven(
                     512,
-                    // Math.min(512 * (imageSrc.width / imageSrc.height), imageSrc.width)
                 );
                 height = decimalUpToSeven(width * (imageSrc.height / imageSrc.width));
             } else {
                 height = decimalUpToSeven(
                     512,
-                    // Math.min((512 * imageSrc.height) / imageSrc.width, imageSrc.height)
                 );
                 width = decimalUpToSeven(height * (imageSrc.width / imageSrc.height));
             }

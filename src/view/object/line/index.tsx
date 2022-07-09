@@ -1,27 +1,27 @@
-import { Context } from 'konva/lib/Context';
-import { Group as GroupType } from 'konva/lib/Group';
-import { KonvaEventObject } from 'konva/lib/Node';
-import { Shape as ShapeType, ShapeConfig } from 'konva/lib/Shape';
-import React, { RefObject, useCallback, useRef } from 'react';
-import { Group, Shape } from 'react-konva';
-import useItem, { OverrideItemProps } from '../../../hook/useItem';
-import useTransformer from '../../../hook/useTransformer';
-import { StageData } from '../../../redux/curretStageData';
+import { Context } from "konva/lib/Context";
+import { Group as GroupType } from "konva/lib/Group";
+import { KonvaEventObject } from "konva/lib/Node";
+import { Shape as ShapeType, ShapeConfig } from "konva/lib/Shape";
+import React, { RefObject, useCallback, useRef } from "react";
+import { Group, Shape } from "react-konva";
+import useItem, { OverrideItemProps } from "../../../hook/useItem";
+import useTransformer from "../../../hook/useTransformer";
+import { StageData } from "../../../redux/currentStageData";
 
 export type LineItemKind = {
-    'data-item-type': string;
-    id: string;
-    icon: string;
-    x: number;
-    y: number;
-    sides: number;
-    radius: number;
+  "data-item-type": string;
+  id: string;
+  icon: string;
+  x: number;
+  y: number;
+  sides: number;
+  radius: number;
 };
 
 export type LineItemProps = OverrideItemProps<{
-    data: StageData;
-    transformer: ReturnType<typeof useTransformer>;
-    e?: DragEvent;
+  data: StageData;
+  transformer: ReturnType<typeof useTransformer>;
+  e?: DragEvent;
 }>;
 
 const LineItem: React.FC<LineItemProps> = ({
@@ -31,9 +31,7 @@ const LineItem: React.FC<LineItemProps> = ({
   onSelect,
 }) => {
   const {
-    attrs: {
-      updatedAt, zIndex, points, ...attrs
-    },
+    attrs: { updatedAt, zIndex, points, ...attrs },
   } = data;
   const lineRef = useRef() as RefObject<GroupType>;
   const { updateItem } = useItem();
@@ -52,7 +50,7 @@ const LineItem: React.FC<LineItemProps> = ({
         points[4],
         points[5],
         points[6],
-        points[7],
+        points[7]
       );
     }
     shape.strokeWidth(4);
@@ -72,7 +70,7 @@ const LineItem: React.FC<LineItemProps> = ({
       }));
       e.target.getLayer()?.batchDraw();
     },
-    [data],
+    [data]
   );
 
   return (

@@ -1,7 +1,7 @@
 import { configureStore, EntityState, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
 import fileMetaReducer, { FileMeta } from './fileMeta';
-import stageDataReducer, { StageData, stageDataEpic } from './curretStageData';
+import stageDataReducer, { StageData, stageDataEpic } from './currentStageData';
 import stageDataListReducer, { StageDataListItem } from './StageDataList';
 import imageAssetListReducer, { ImageAssetListItem } from './imageAssetList';
 

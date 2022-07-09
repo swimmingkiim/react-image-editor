@@ -1,27 +1,27 @@
-import { RegularPolygon as RegularPolygonType } from 'konva/lib/shapes/RegularPolygon';
-import { Rect as RectType } from 'konva/lib/shapes/Rect';
-import React, { RefObject, useEffect, useRef } from 'react';
-import { Rect, RegularPolygon } from 'react-konva';
-import { OverrideItemProps } from '../../../hook/useItem';
-import useTransformer from '../../../hook/useTransformer';
-import { StageData } from '../../../redux/curretStageData';
-import useDragAndDrop from '../../../hook/useDragAndDrop';
-import useStage from '../../../hook/useStage';
+import { RegularPolygon as RegularPolygonType } from "konva/lib/shapes/RegularPolygon";
+import { Rect as RectType } from "konva/lib/shapes/Rect";
+import React, { RefObject, useEffect, useRef } from "react";
+import { Rect, RegularPolygon } from "react-konva";
+import { OverrideItemProps } from "../../../hook/useItem";
+import useTransformer from "../../../hook/useTransformer";
+import { StageData } from "../../../redux/currentStageData";
+import useDragAndDrop from "../../../hook/useDragAndDrop";
+import useStage from "../../../hook/useStage";
 
 export type ShapeItemKind = {
-    'data-item-type': string;
-    id: string;
-    icon: string;
-    x: number;
-    y: number;
-    sides: number;
-    radius: number;
+  "data-item-type": string;
+  id: string;
+  icon: string;
+  x: number;
+  y: number;
+  sides: number;
+  radius: number;
 };
 
 export type ShapeItemProps = OverrideItemProps<{
-    data: StageData;
-    transformer: ReturnType<typeof useTransformer>;
-    e?: DragEvent;
+  data: StageData;
+  transformer: ReturnType<typeof useTransformer>;
+  e?: DragEvent;
 }>;
 
 const ShapeItem: React.FC<ShapeItemProps> = ({
@@ -36,7 +36,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({
   const stage = useStage();
   const { onDragMoveFrame, onDragEndFrame, checkIsInFrame } = useDragAndDrop(
     stage.stageRef,
-    stage.dragBackgroundOrigin,
+    stage.dragBackgroundOrigin
   );
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({
         radius={attrs.radius}
         scaleX={attrs.scaleX}
         scaleY={attrs.scaleY}
-        fill={attrs.fill ?? '#000000'}
+        fill={attrs.fill ?? "#000000"}
         stroke={attrs.stroke ?? null}
         strokeWidth={attrs.stroke ? 5 : undefined}
         opacity={attrs.opacity ?? 1}
@@ -87,7 +87,7 @@ const ShapeItem: React.FC<ShapeItemProps> = ({
       radius={attrs.radius}
       scaleX={attrs.scaleX}
       scaleY={attrs.scaleY}
-      fill={attrs.fill ?? '#000000'}
+      fill={attrs.fill ?? "#000000"}
       stroke={attrs.stroke ?? null}
       strokeWidth={attrs.stroke ? 5 : undefined}
       opacity={attrs.opacity ?? 1}

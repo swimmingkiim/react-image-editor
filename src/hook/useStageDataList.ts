@@ -1,9 +1,8 @@
 import Konva from 'konva';
 import { useDispatch, useSelector } from 'react-redux';
-import { StageData, stageDataSelector } from '../redux/curretStageData';
+import { StageData, stageDataSelector } from '../redux/currentStageData';
 import { stageDataListAction, StageDataListItem, stageDataListSelector } from '../redux/StageDataList';
 import useItem from './useItem';
-import useLocalStorage from './useLocalStorage';
 
 export type TAB_CONTEXT = {
     selectedFileId: Konva.Node[];
@@ -19,7 +18,6 @@ const useStageDataList = () => {
     const stageDataList = useSelector(stageDataListSelector.selectAll);
     const stageData = useSelector(stageDataSelector.selectAll);
     const { alterItems, clearItems } = useItem();
-    const { getValue, setValue } = useLocalStorage();
 
     const initializeFileDataList = (dataList: StageDataListItem[]) => {
         dispatch(stageDataListAction.initialize(dataList));

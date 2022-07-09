@@ -1,7 +1,7 @@
 import Konva from 'konva';
 import { KonvaEventObject } from 'konva/lib/Node';
 import { useDispatch, useSelector } from 'react-redux';
-import { StageData, stageDataAction, stageDataSelector } from '../redux/curretStageData';
+import { StageData, stageDataAction, stageDataSelector } from '../redux/currentStageData';
 
 export type ItemData = {
     'data-item-type': string;

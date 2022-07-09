@@ -1,7 +1,6 @@
 import { Node, NodeConfig } from 'konva/lib/Node';
-import { StageData } from '../redux/curretStageData';
+import { StageData } from '../redux/currentStageData';
 import useHotkeyFunc from './useHotkeyFunc';
-import useImageAsset from './useImageAsset';
 import useItem from './useItem';
 import useModal from './useModal';
 import useRemoveImageBackground from './useRemoveImageBackground';
@@ -20,7 +19,6 @@ const useTool = (
 ) => {
     const { updateItem } = useItem();
     const hotkeyFunc = useHotkeyFunc();
-    const { getImageAssetSrc, reduceImageSize } = useImageAsset();
     const { autoRemoveBackground } = useRemoveImageBackground();
     const onClickHotkeyButton = () => {
         modal.openModal();

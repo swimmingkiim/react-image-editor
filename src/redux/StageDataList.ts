@@ -1,7 +1,7 @@
 import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Epic, ofType } from 'redux-observable';
 import { take, tap } from 'rxjs';
-import { StageData } from './curretStageData';
+import { StageData } from './currentStageData';
 import { StoreState } from './store';
 
 export const STAGE_LIST_PREFIX = 'STAGE_LIST';

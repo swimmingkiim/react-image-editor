@@ -1,22 +1,26 @@
-import Konva from 'konva';
-import { KonvaEventObject } from 'konva/lib/Node';
+import Konva from "konva";
+import { KonvaEventObject } from "konva/lib/Node";
 import React, {
-  RefObject, useCallback, useEffect, useRef, useState,
-} from 'react';
-import { Image as KonvaImage } from 'react-konva';
-import useItem, { OverrideItemProps } from '../../../hook/useItem';
-import { StageData } from '../../../redux/curretStageData';
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { Image as KonvaImage } from "react-konva";
+import useItem, { OverrideItemProps } from "../../../hook/useItem";
+import { StageData } from "../../../redux/currentStageData";
 
 export type IconItemKind = {
-    'data-item-type': string;
-    id: string;
-    name: string;
-    icon: string;
+  "data-item-type": string;
+  id: string;
+  name: string;
+  icon: string;
 };
 
 export type IconItemProps = OverrideItemProps<{
-    data: StageData;
-    e?: DragEvent;
+  data: StageData;
+  e?: DragEvent;
 }>;
 
 const IconItem: React.FC<IconItemProps> = ({ data, e, onSelect }) => {
@@ -38,7 +42,7 @@ const IconItem: React.FC<IconItemProps> = ({ data, e, onSelect }) => {
       }));
       e.target.getLayer()?.batchDraw();
     },
-    [data],
+    [data]
   );
 
   useEffect(() => {
@@ -46,7 +50,7 @@ const IconItem: React.FC<IconItemProps> = ({ data, e, onSelect }) => {
       `${process.env.PUBLIC_URL}/assets/icon/bootstrap/${attrs.icon}`,
       (image: Konva.Image) => {
         setImageSrc(image.image()!);
-      },
+      }
     );
   }, []);
 
