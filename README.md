@@ -1,4 +1,5 @@
 # React Image Editor
+![Live Screenshot](https://github.com/swimmingkiim/react-image-editor/blob/main/screenshots/screenshot-1.png?raw=true)
 
 ## How to Run Project
 
