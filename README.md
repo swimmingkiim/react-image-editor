@@ -21,8 +21,8 @@ npm run serve
 
 - Data
 
-    - save to localStorage
-    - reload from localStorage
+    - history (undo, redo)
+    - copy, paste, duplicate
 
 - Color
 
@@ -59,8 +59,6 @@ npm run serve
         - opacity
     - Image
         - import image
-        - save to localStorage
-        - reload from localStorage
         - brightness
         - filter
     - Shape
