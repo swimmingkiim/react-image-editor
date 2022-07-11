@@ -1,9 +1,9 @@
-import Konva from 'konva';
-import { Vector2d } from 'konva/lib/types';
-import { MutableRefObject, useRef } from 'react';
+import Konva from "konva";
+import { Vector2d } from "konva/lib/types";
+import { MutableRefObject, useRef } from "react";
 
-export const STAGE_POSITION = 'stagePosition';
-export const STAGE_SCALE = 'stageScale';
+export const STAGE_POSITION = "stagePosition";
+export const STAGE_SCALE = "stageScale";
 
 const useStage = () => {
   const stageRef = useRef() as MutableRefObject<Konva.Stage>;

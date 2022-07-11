@@ -1,9 +1,5 @@
 const useDebounceCallback = () => {
-  const debounceCallback = (
-    callback: (...values: any[]) => void,
-    delay: number,
-    values: any[],
-  ) => {
+  const debounceCallback = (callback: (...values: any[]) => void, delay: number, values: any[]) => {
     setTimeout(() => {
       callback(...values);
     }, delay);

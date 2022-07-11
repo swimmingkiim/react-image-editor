@@ -1,13 +1,13 @@
-import { Group } from 'konva/lib/Group';
-import { Node, NodeConfig } from 'konva/lib/Node';
-import { nanoid } from 'nanoid';
-import React from 'react';
-import { StageData } from '../redux/currentStageData';
-import useItem from './useItem';
-import useLocalStorage from './useLocalStorage';
-import useSelection from './useSelection';
-import useStage, { STAGE_POSITION, STAGE_SCALE } from './useStage';
-import useTransformer from './useTransformer';
+import { Group } from "konva/lib/Group";
+import { Node, NodeConfig } from "konva/lib/Node";
+import { nanoid } from "nanoid";
+import React from "react";
+import { StageData } from "../redux/currentStageData";
+import useItem from "./useItem";
+import useLocalStorage from "./useLocalStorage";
+import useSelection from "./useSelection";
+import useStage, { STAGE_POSITION, STAGE_SCALE } from "./useStage";
+import useTransformer from "./useTransformer";
 
 const useHotkeyFunc = () => {
   const { removeItem, createItem, updateItem } = useItem();
@@ -15,18 +15,17 @@ const useHotkeyFunc = () => {
 
   const selectAll = (
     stage: ReturnType<typeof useStage>,
-    onSelectItem: ReturnType<typeof useSelection>['onSelectItem'],
+    onSelectItem: ReturnType<typeof useSelection>["onSelectItem"],
   ) => {
     const frameGroups = stage.stageRef.current
       .getChildren()[0]
-      .getChildren((_item) => _item.attrs.name === 'label-group')
+      .getChildren((_item) => _item.attrs.name === "label-group")
       .map((_item) => [...((_item as Group).children ?? [])])
       .flat();
     const items = stage.stageRef.current
       .getChildren()[0]
       .getChildren(
-        (_item) => _item.attrs.name === 'label-target'
-                    && _item.attrs['data-item-type'] !== 'frame',
+        (_item) => _item.attrs.name === "label-target" && _item.attrs["data-item-type"] !== "frame",
       );
     const newSelections = [...frameGroups, ...items];
     onSelectItem(undefined, newSelections);
@@ -101,7 +100,7 @@ const useHotkeyFunc = () => {
   const deleteItems = (
     selectedItems: Node<NodeConfig>[],
     setSelectedItems: (value: React.SetStateAction<Node<NodeConfig>[]>) => void,
-    transformerRef: ReturnType<typeof useTransformer>['transformerRef'],
+    transformerRef: ReturnType<typeof useTransformer>["transformerRef"],
   ) => {
     setSelectedItems([]);
     transformerRef.current?.nodes([]);

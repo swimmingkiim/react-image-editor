@@ -1,22 +1,22 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Konva from 'konva';
-import { KonvaEventObject, Node, NodeConfig } from 'konva/lib/Node';
-import { useHotkeys } from 'react-hotkeys-hook';
-import { IRect, Vector2d } from 'konva/lib/types';
-import { Provider, ReactReduxContext } from 'react-redux';
-import { Layer, Rect, Stage } from 'react-konva';
-import { decimalUpToSeven } from '../util/decimalUpToSeven';
-import Drop from '../util/Drop';
-import positionStyles from '../style/position.module.css';
-import { ITEMS_CONTEXT } from '../hook/useItem';
-import useDragAndDrop from '../hook/useDragAndDrop';
-import useStage, { STAGE_POSITION, STAGE_SCALE } from '../hook/useStage';
-import useLocalStorage from '../hook/useLocalStorage';
+import React, { useCallback, useEffect, useState } from "react";
+import Konva from "konva";
+import { KonvaEventObject, Node, NodeConfig } from "konva/lib/Node";
+import { useHotkeys } from "react-hotkeys-hook";
+import { IRect, Vector2d } from "konva/lib/types";
+import { Provider, ReactReduxContext } from "react-redux";
+import { Layer, Rect, Stage } from "react-konva";
+import { decimalUpToSeven } from "../util/decimalUpToSeven";
+import Drop from "../util/Drop";
+import positionStyles from "../style/position.module.css";
+import { ITEMS_CONTEXT } from "../hook/useItem";
+import useDragAndDrop from "../hook/useDragAndDrop";
+import useStage, { STAGE_POSITION, STAGE_SCALE } from "../hook/useStage";
+import useLocalStorage from "../hook/useLocalStorage";
 
 type ViewProps = {
-    onSelect: ITEMS_CONTEXT['onSelect'];
-    stage: ReturnType<typeof useStage>;
-    children: React.ReactNode;
+  onSelect: ITEMS_CONTEXT["onSelect"];
+  stage: ReturnType<typeof useStage>;
+  children: React.ReactNode;
 };
 
 const View: React.FC<ViewProps> = ({
@@ -32,9 +32,7 @@ const View: React.FC<ViewProps> = ({
     if (!stageRef.current || !stageRef.current.container().parentElement) {
       return;
     }
-    const { width, height } = stageRef.current
-      .container()
-      .parentElement!.getBoundingClientRect();
+    const { width, height } = stageRef.current.container().parentElement!.getBoundingClientRect();
     stageRef.current.width(width);
     stageRef.current.height(height);
     stageRef.current.batchDraw();
@@ -87,45 +85,34 @@ const View: React.FC<ViewProps> = ({
 
   const moveStage = useCallback(() => {
     const stage = stageRef.current;
-    if (
-      !stage
-            || !stage.container().parentElement
-            || !dragBackgroundOrigin.current
-    ) {
+    if (!stage || !stage.container().parentElement || !dragBackgroundOrigin.current) {
       return;
     }
-    stage.on('mousemove', (e) => {
+    stage.on("mousemove", (e) => {
       if (e.evt.which !== 1) {
         return;
       }
       const currentMousePos = stage.getPointerPosition();
       if (!currentMousePos) {
-
+        return;
       }
-      if (
-        dragBackgroundOrigin.current.x === 0
-                && dragBackgroundOrigin.current.y === 0
-      ) {
+      if (dragBackgroundOrigin.current.x === 0 && dragBackgroundOrigin.current.y === 0) {
         dragBackgroundOrigin.current = currentMousePos!;
         return;
       }
       const newPos = {
-        x: decimalUpToSeven(
-          stage.x() + (currentMousePos!.x - dragBackgroundOrigin.current.x),
-        ),
-        y: decimalUpToSeven(
-          stage.y() + (currentMousePos!.y - dragBackgroundOrigin.current.y),
-        ),
+        x: decimalUpToSeven(stage.x() + (currentMousePos!.x - dragBackgroundOrigin.current.x)),
+        y: decimalUpToSeven(stage.y() + (currentMousePos!.y - dragBackgroundOrigin.current.y)),
       };
       stage.position(newPos);
       setValue(STAGE_POSITION, newPos);
       dragBackgroundOrigin.current = currentMousePos!;
     });
-    stage.on('mouseup', (e) => {
+    stage.on("mouseup", (e) => {
       dragBackgroundOrigin.current = { x: 0, y: 0 };
       if (!stageRef.current?.draggable()) {
-        stage.removeEventListener('mousemove');
-        stage.removeEventListener('mouseup');
+        stage.removeEventListener("mousemove");
+        stage.removeEventListener("mouseup");
       }
     });
     stageRef.current?.draggable(true);
@@ -133,7 +120,7 @@ const View: React.FC<ViewProps> = ({
 
   const onSelectEmptyBackground = useCallback(
     (e: KonvaEventObject<MouseEvent>) => {
-      e.target.getType() === 'Stage' && onSelect(e);
+      e.target.getType() === "Stage" && onSelect(e);
     },
     [onSelect],
   );
@@ -145,14 +132,11 @@ const View: React.FC<ViewProps> = ({
       if (!stage) {
         return;
       }
-      const selectBox = stage.findOne('.select-box');
+      const selectBox = stage.findOne(".select-box");
       const scaledCurrentMousePos = getScaledMousePosition(stage, e.evt);
       const currentMousePos = stage.getPointerPosition();
       selectBox.position(scaledCurrentMousePos);
-      if (
-        stage.getAllIntersections(currentMousePos).length
-                || stageRef.current?.draggable()
-      ) {
+      if (stage.getAllIntersections(currentMousePos).length || stageRef.current?.draggable()) {
         selectBox.visible(false);
         return;
       }
@@ -167,18 +151,14 @@ const View: React.FC<ViewProps> = ({
       if (!stage) {
         return;
       }
-      const selectBox = stage.findOne('.select-box');
+      const selectBox = stage.findOne(".select-box");
       if (!selectBox.visible()) {
         return;
       }
       const currentMousePos = getScaledMousePosition(stage, e.evt);
       const origin = selectBox.position();
       const size = selectBox.size();
-      const adjustedRectInfo = getOriginFromTwoPoint(
-        origin,
-        currentMousePos,
-        size,
-      );
+      const adjustedRectInfo = getOriginFromTwoPoint(origin, currentMousePos, size);
       selectBox.position({
         x: adjustedRectInfo.x,
         y: adjustedRectInfo.y,
@@ -197,17 +177,16 @@ const View: React.FC<ViewProps> = ({
       if (!stage) {
         return;
       }
-      const selectBox = stage.findOne('.select-box');
-      const overlapItems: Node<NodeConfig>[] = getItemsInBoundary(
-        stage,
-        selectBox,
-      )
+      const selectBox = stage.findOne(".select-box");
+      const overlapItems: Node<NodeConfig>[] = getItemsInBoundary(stage, selectBox)
         ? getItemsInBoundary(stage, selectBox)!
-          .map((_item) => (_item.attrs['data-item-type'] === 'frame'
-            ? _item.getParent().getChildren() ?? []
-            : _item))
+          .map((_item) =>
+            _item.attrs["data-item-type"] === "frame"
+              ? _item.getParent().getChildren() ?? []
+              : _item,
+          )
           .flat()
-          .filter((_item) => _item.className !== 'Label')
+          .filter((_item) => _item.className !== "Label")
         : [];
 
       selectBox.visible(false);
@@ -226,7 +205,7 @@ const View: React.FC<ViewProps> = ({
   );
 
   useHotkeys(
-    'space',
+    "space",
     (e) => {
       moveStage();
     },
@@ -235,17 +214,17 @@ const View: React.FC<ViewProps> = ({
   );
 
   useHotkeys(
-    'space',
+    "space",
     (e) => {
       stageRef.current?.draggable(false);
-      stageRef.current?.fire('mouseup');
+      stageRef.current?.fire("mouseup");
     },
     { keyup: true },
     [stageRef.current, moveStage],
   );
 
   useHotkeys(
-    'ctrl+0',
+    "ctrl+0",
     (e) => {
       resetZoom();
     },
@@ -254,9 +233,9 @@ const View: React.FC<ViewProps> = ({
   );
 
   useEffect(() => {
-    window.addEventListener('load', setStateSizeToFitIn);
-    window.addEventListener('resize', setStateSizeToFitIn);
-    return () => window.removeEventListener('resize', setStateSizeToFitIn);
+    window.addEventListener("load", setStateSizeToFitIn);
+    window.addEventListener("resize", setStateSizeToFitIn);
+    return () => window.removeEventListener("resize", setStateSizeToFitIn);
   }, [setStateSizeToFitIn]);
 
   useEffect(() => {
@@ -277,12 +256,9 @@ const View: React.FC<ViewProps> = ({
           onMouseDown={onMouseDownOnStage}
           onMouseMove={onMouseMoveOnStage}
           onMouseUp={onMouseUpOnStage}
-          className={[
-            positionStyles.absolute,
-            positionStyles.top0,
-            positionStyles.left0,
-          ].join(' ')}
-        >
+          className={[positionStyles.absolute, positionStyles.top0, positionStyles.left0].join(
+            " ",
+          )}>
           <Provider store={store}>
             <Layer>
               {children}
@@ -297,9 +273,7 @@ const View: React.FC<ViewProps> = ({
                 visible={false}
               />
             </Layer>
-            {container ? (
-              <Drop callback={onDropOnStage} targetDOMElement={container} />
-            ) : null}
+            {container ? <Drop callback={onDropOnStage} targetDOMElement={container} /> : null}
           </Provider>
         </Stage>
       )}
@@ -309,10 +283,7 @@ const View: React.FC<ViewProps> = ({
 
 export default View;
 
-export const getScaledMousePosition = (
-  stage: Konva.Stage,
-  e: DragEvent | MouseEvent,
-) => {
+export const getScaledMousePosition = (stage: Konva.Stage, e: DragEvent | MouseEvent) => {
   stage.setPointersPositions(e);
   const stageOrigin = stage.getAbsolutePosition();
   const mousePosition = stage.getPointerPosition();
@@ -328,28 +299,25 @@ export const getScaledMousePosition = (
   };
 };
 
-export const getItemsInBoundary = (
-  stage: Konva.Stage,
-  targetItem: Konva.Node,
-) => {
+export const getItemsInBoundary = (stage: Konva.Stage, targetItem: Konva.Node) => {
   const boundary = targetItem.getClientRect({ relativeTo: stage.getLayer() });
   const result = targetItem
     .getLayer()
     ?.getChildren((item: Konva.Node) => {
-      if (item.name() === 'select-box') {
+      if (item.name() === "select-box") {
         return false;
       }
       const itemBoundary = item.getClientRect({ relativeTo: stage.getLayer() });
       return (
         boundary.x <= itemBoundary.x
-                && boundary.y <= itemBoundary.y
-                && boundary.x + boundary.width >= itemBoundary.x + itemBoundary.width
-                && boundary.y + boundary.height >= itemBoundary.y + itemBoundary.height
+        && boundary.y <= itemBoundary.y
+        && boundary.x + boundary.width >= itemBoundary.x + itemBoundary.width
+        && boundary.y + boundary.height >= itemBoundary.y + itemBoundary.height
       );
     })
     .map((item) => {
-      if (item.name() === 'label-group') {
-        return (item as Konva.Group).findOne('.label-target') ?? null;
+      if (item.name() === "label-group") {
+        return (item as Konva.Group).findOne(".label-target") ?? null;
       }
       return item;
     })

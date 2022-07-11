@@ -1,13 +1,13 @@
-import { createSelector, createSlice } from '@reduxjs/toolkit';
-import { Vector2d } from 'konva/lib/types';
-import { StoreState } from './store';
+import { createSelector, createSlice } from "@reduxjs/toolkit";
+import { Vector2d } from "konva/lib/types";
+import { StoreState } from "./store";
 
-const FILE_META_PREFIX = 'FILE_META';
+const FILE_META_PREFIX = "FILE_META";
 
 export type FileMeta = {
-    scale: Vector2d,
-    position: Vector2d
-}
+  scale: Vector2d;
+  position: Vector2d;
+};
 
 const initialFileMeta: FileMeta = {
   scale: {

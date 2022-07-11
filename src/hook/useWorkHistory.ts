@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { StageData } from '../redux/currentStageData';
-import useItem from './useItem';
+import React, { useCallback, useEffect, useState } from "react";
+import { StageData } from "../redux/currentStageData";
+import useItem from "./useItem";
 
 const useWorkHistory = (
   past: StageData[][],
@@ -37,7 +37,7 @@ const useWorkHistory = (
       //
       if (newCurrent.length !== 0 && current !== null) {
         if (
-        // current === null &&
+          // current === null &&
           JSON.stringify(newCurrent) !== JSON.stringify(current)
         ) {
           setPast((prev) => [...prev, current]);
@@ -55,14 +55,6 @@ const useWorkHistory = (
     setPast([]);
     setFuture([]);
   };
-
-  useEffect(() => {
-
-  }, [past]);
-
-  useEffect(() => {
-
-  }, [future]);
 
   return {
     goToPast,

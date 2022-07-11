@@ -1,23 +1,24 @@
-import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Epic, ofType } from 'redux-observable';
-import { take, tap } from 'rxjs';
-import { OverrideItemData } from '../hook/useItem';
-import { StoreState } from './store';
+import { createEntityAdapter, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Epic, ofType } from "redux-observable";
+import { take, tap } from "rxjs";
+import { OverrideItemData } from "../hook/useItem";
+import { StoreState } from "./store";
 
-export const STAGE_PREFIX = 'STAGE';
+export const STAGE_PREFIX = "STAGE";
 
 export type StageData = {
-    id: string;
-    attrs: OverrideItemData<any>;
-    className: string;
-    children?: StageData[];
+  id: string;
+  attrs: OverrideItemData<any>;
+  className: string;
+  children?: StageData[];
 };
 
-export const stageDataEpic: Epic = (action$, state$) => action$.pipe(
-  ofType(stageDataAction.addItem.type),
-  take(1),
-  tap((action$) => console.log('')),
-);
+export const stageDataEpic: Epic = (action$, state$) =>
+  action$.pipe(
+    ofType(stageDataAction.addItem.type),
+    take(1),
+    tap((action$) => console.log("")),
+  );
 
 export const stageDataEntity = createEntityAdapter<StageData>();
 

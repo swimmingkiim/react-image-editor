@@ -1,130 +1,84 @@
 {
   "moveBackground": {
     "name": "Move Backgroud",
-    "keys": [
-      "spacebar",
-      "click & move"
-    ],
+    "keys": ["spacebar", "click & move"],
     "desc": ""
   },
   "resetZoom": {
     "name": "Reset Zoom",
-    "keys": [
-      "ctrl",
-      "0"
-    ],
+    "keys": ["ctrl", "0"],
     "desc": ""
   },
   "zoomIn": {
     "name": "Zoom In",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   "zoomOut": {
     "name": "Zoom Out",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   "layerUp": {
     "name": "Layer Up",
-    "keys": [
-      "shift",
-      "up"
-    ],
+    "keys": ["shift", "up"],
     "desc": ""
   },
   "layerDown": {
     "name": "Layer Down",
-    "keys": [
-      "shift",
-      "down"
-    ],
+    "keys": ["shift", "down"],
     "desc": ""
   },
   "deleteItems": {
     "name": "Delete",
-    "keys": [
-      "backspace"
-    ],
+    "keys": ["backspace"],
     "desc": ""
   },
   "duplicateItems": {
     "name": "Duplicate",
-    "keys": [
-      "ctrl",
-      "d"
-    ],
+    "keys": ["ctrl", "d"],
     "desc": ""
   },
   "copyItems": {
     "name": "Copy Selected Items",
-    "keys": [
-      "ctrl",
-      "c"
-    ],
+    "keys": ["ctrl", "c"],
     "desc": ""
   },
   "pasteItems": {
     "name": "Paste Selected Items",
-    "keys": [
-      "ctrl",
-      "v"
-    ],
+    "keys": ["ctrl", "v"],
     "desc": ""
   },
   "selectAllItems": {
     "name": "Select All Items",
-    "keys": [
-      "ctrl",
-      "a"
-    ],
+    "keys": ["ctrl", "a"],
     "desc": ""
   },
   "flipHorizontally": {
     "name": "Flip Horizontally",
-    "keys": [
-      "shift",
-      "h"
-    ],
+    "keys": ["shift", "h"],
     "desc": ""
   },
   "flipVertically": {
     "name": "Flip Vertically",
-    "keys": [
-      "shift",
-      "v"
-    ],
+    "keys": ["shift", "v"],
     "desc": ""
   },
   "undo": {
     "id": "undo",
     "name": "Undo",
-    "keys": [
-      "ctrl",
-      "z"
-    ],
+    "keys": ["ctrl", "z"],
     "desc": ""
   },
   "redo": {
     "id": "redo",
     "name": "Redo",
-    "keys": [
-      "ctrl",
-      "y"
-    ],
+    "keys": ["ctrl", "y"],
     "desc": ""
   },
   "remove-background": {
     "name": "Remove Background of Selected Image",
-    "keys": [
-      "ctrl",
-      "x",
-      "b"
-    ],
+    "keys": ["ctrl", "x", "b"],
     "desc": "Remove Background of Selected Image"
   }
 }

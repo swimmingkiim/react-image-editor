@@ -49,15 +49,12 @@ function App() {
     past,
     future,
     setPast,
-    setFuture
+    setFuture,
   );
   const transformer = useTransformer();
-  const { selectedItems, onSelectItem, setSelectedItems, clearSelection } =
-    useSelection(transformer);
-  const { tabList, onClickTab, onCreateTab, onDeleteTab } = useTab(
-    transformer,
-    clearHistory
-  );
+  const { selectedItems, onSelectItem, setSelectedItems, clearSelection }
+    = useSelection(transformer);
+  const { tabList, onClickTab, onCreateTab, onDeleteTab } = useTab(transformer, clearHistory);
   const { stageData } = useItem();
   const { initializeFileDataList, updateFileData } = useStageDataList();
   const stage = useStage();
@@ -77,8 +74,7 @@ function App() {
   const [clipboard, setClipboard] = useState<StageData[]>([]);
   const createStageDataObject = (item: Node<NodeConfig>): StageData => {
     const { id } = item.attrs;
-    const target =
-      item.attrs["data-item-type"] === "frame" ? item.getParent() : item;
+    const target = item.attrs["data-item-type"] === "frame" ? item.getParent() : item;
     return {
       id: nanoid(),
       attrs: {
@@ -95,13 +91,10 @@ function App() {
     setSelectedItems,
     transformer,
     createStageDataObject,
-    onSelectItem
+    onSelectItem,
   );
 
-  const currentTabId = useMemo(
-    () => tabList.find((tab) => tab.active)?.id ?? null,
-    [tabList]
-  );
+  const currentTabId = useMemo(() => tabList.find((tab) => tab.active)?.id ?? null, [tabList]);
 
   const sortedStageData = useMemo(
     () =>
@@ -114,7 +107,7 @@ function App() {
         }
         return a.attrs.zIndex - b.attrs.zIndex;
       }),
-    [stageData]
+    [stageData],
   );
 
   const header = (
@@ -174,6 +167,65 @@ function App() {
     />
   );
 
+  const renderObject = (item: StageData) => {
+    switch (item.attrs["data-item-type"]) {
+      case "frame":
+        return (
+          <Frame
+            key={`frame-${item.id}`}
+            data={item as FrameProps["data"]}
+            onSelect={onSelectItem}
+          />
+        );
+      case "image":
+        return (
+          <ImageItem
+            key={`image-${item.id}`}
+            data={item as ImageItemProps["data"]}
+            onSelect={onSelectItem}
+          />
+        );
+      case "text":
+        return (
+          <TextItem
+            key={`image-${item.id}`}
+            data={item as TextItemProps["data"]}
+            transformer={transformer}
+            onSelect={onSelectItem}
+          />
+        );
+      case "shape":
+        return (
+          <ShapeItem
+            key={`shape-${item.id}`}
+            data={item as ShapeItemProps["data"]}
+            transformer={transformer}
+            onSelect={onSelectItem}
+          />
+        );
+      case "icon":
+        return (
+          <IconItem
+            key={`icon-${item.id}`}
+            data={item as IconItemProps["data"]}
+            transformer={transformer}
+            onSelect={onSelectItem}
+          />
+        );
+      case "line":
+        return (
+          <LineItem
+            key={`line-${item.id}`}
+            data={item as LineItemProps["data"]}
+            transformer={transformer}
+            onSelect={onSelectItem}
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   useHotkeys(
     "shift+up",
     (e) => {
@@ -181,7 +233,7 @@ function App() {
       layerUp(selectedItems);
     },
     {},
-    [selectedItems]
+    [selectedItems],
   );
 
   useHotkeys(
@@ -191,7 +243,7 @@ function App() {
       layerDown(selectedItems);
     },
     {},
-    [selectedItems]
+    [selectedItems],
   );
 
   useHotkeys(
@@ -201,7 +253,7 @@ function App() {
       duplicateItems(selectedItems, createStageDataObject);
     },
     {},
-    [selectedItems, stageData]
+    [selectedItems, stageData],
   );
 
   useHotkeys(
@@ -211,7 +263,7 @@ function App() {
       copyItems(selectedItems, setClipboard, createStageDataObject);
     },
     {},
-    [selectedItems, stageData, clipboard]
+    [selectedItems, stageData, clipboard],
   );
 
   useHotkeys(
@@ -221,7 +273,7 @@ function App() {
       selectAll(stage, onSelectItem);
     },
     {},
-    [selectedItems]
+    [selectedItems],
   );
 
   useHotkeys(
@@ -231,7 +283,7 @@ function App() {
       pasteItems(clipboard);
     },
     {},
-    [clipboard]
+    [clipboard],
   );
 
   useHotkeys(
@@ -241,7 +293,7 @@ function App() {
       goToPast();
     },
     {},
-    [goToPast]
+    [goToPast],
   );
 
   useHotkeys(
@@ -251,7 +303,7 @@ function App() {
       goToFuture();
     },
     {},
-    [goToFuture]
+    [goToFuture],
   );
 
   useHotkeys(
@@ -261,7 +313,7 @@ function App() {
       flipHorizontally(selectedItems);
     },
     {},
-    [selectedItems]
+    [selectedItems],
   );
 
   useHotkeys(
@@ -271,7 +323,7 @@ function App() {
       flipVertically(selectedItems);
     },
     {},
-    [selectedItems]
+    [selectedItems],
   );
 
   useHotkeys(
@@ -281,7 +333,7 @@ function App() {
       deleteItems(selectedItems, setSelectedItems, transformer.transformerRef);
     },
     { enabled: Boolean(selectedItems.length) },
-    [selectedItems, transformer.transformerRef.current]
+    [selectedItems, transformer.transformerRef.current],
   );
 
   useEffect(() => {
@@ -312,66 +364,7 @@ function App() {
     <Layout header={header} navBar={navBar} settingBar={settingBar}>
       {hotkeyModal}
       <View onSelect={onSelectItem} stage={stage}>
-        {stageData.length
-          ? sortedStageData.map((item) => {
-              switch (item.attrs["data-item-type"]) {
-                case "frame":
-                  return (
-                    <Frame
-                      key={`frame-${item.id}`}
-                      data={item as FrameProps["data"]}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                case "image":
-                  return (
-                    <ImageItem
-                      key={`image-${item.id}`}
-                      data={item as ImageItemProps["data"]}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                case "text":
-                  return (
-                    <TextItem
-                      key={`image-${item.id}`}
-                      data={item as TextItemProps["data"]}
-                      transformer={transformer}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                case "shape":
-                  return (
-                    <ShapeItem
-                      key={`shape-${item.id}`}
-                      data={item as ShapeItemProps["data"]}
-                      transformer={transformer}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                case "icon":
-                  return (
-                    <IconItem
-                      key={`icon-${item.id}`}
-                      data={item as IconItemProps["data"]}
-                      transformer={transformer}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                case "line":
-                  return (
-                    <LineItem
-                      key={`line-${item.id}`}
-                      data={item as LineItemProps["data"]}
-                      transformer={transformer}
-                      onSelect={onSelectItem}
-                    />
-                  );
-                default:
-                  return null;
-              }
-            })
-          : null}
+        {stageData.length ? sortedStageData.map((item) => renderObject(item)) : null}
         <Transformer
           ref={transformer.transformerRef}
           keepRatio

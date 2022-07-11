@@ -55,11 +55,8 @@ const ExportThumbnail: React.FC<{
   const { getTranslation } = useI18n();
   const downloadSelected = (targetFrame?: Node<NodeConfig> | Group) => {
     const link = document.createElement("a");
-    const frame =
-      targetFrame ??
-      data.selectedItems.find(
-        (item) => item.attrs["data-item-type"] === "frame"
-      );
+    const frame
+      = targetFrame ?? data.selectedItems.find((item) => item.attrs["data-item-type"] === "frame");
     if (frame) {
       const stage = frame.getStage()!;
       data.clearSelection();
@@ -85,12 +82,7 @@ const ExportThumbnail: React.FC<{
       .getChildren()[0]
       .getChildren((item) => item.attrs.name === "label-group");
     frames
-      .map(
-        (frame) =>
-          (frame as Group).getChildren(
-            (item) => item.attrs.name === "label-target"
-          )[0]
-      )
+      .map((frame) => (frame as Group).getChildren((item) => item.attrs.name === "label-target")[0])
       .forEach((frame) => {
         downloadSelected(frame as Node<NodeConfig>);
       });
@@ -108,16 +100,10 @@ const ExportThumbnail: React.FC<{
     <Figure
       as={Col}
       onClick={onClickDownload(data.id)}
-      className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}
-    >
+      className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}>
       <i className={`bi-${data.icon}`} style={{ fontSize: 20, width: 25 }} />
       <Figure.Caption
-        className={[
-          fontStyles.font075em,
-          sizeStyles.width100,
-          "text-center",
-        ].join(" ")}
-      >
+        className={[fontStyles.font075em, sizeStyles.width100, "text-center"].join(" ")}>
         {`${getTranslation("widget", "export", data.id, "name")}`}
       </Figure.Caption>
     </Figure>

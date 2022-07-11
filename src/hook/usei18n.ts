@@ -1,14 +1,12 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-export type Category = 'widget' | 'hotkey' | 'workMode';
+export type Category = "widget" | "hotkey" | "workMode";
 
 const useI18n = () => {
-  const { t } = useTranslation(['widget', 'hotkey', 'workMode']);
+  const { t } = useTranslation(["widget", "hotkey", "workMode"]);
 
-  const getTranslation = (
-    category: 'widget' | 'hotkey' | 'workMode',
-    ...values: string[]
-  ) => t(`${category}:${values.join(':')}`);
+  const getTranslation = (category: "widget" | "hotkey" | "workMode", ...values: string[]) =>
+    t(`${category}:${values.join(":")}`);
 
   return { getTranslation };
 };

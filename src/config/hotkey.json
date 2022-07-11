@@ -2,133 +2,91 @@
   {
     "id": "moveBackground",
     "name": "Move Backgroud",
-    "keys": [
-      "spacebar",
-      "click & move"
-    ],
+    "keys": ["spacebar", "click & move"],
     "desc": ""
   },
   {
     "id": "resetZoom",
     "name": "Reset Zoom",
-    "keys": [
-      "ctrl",
-      "0"
-    ],
+    "keys": ["ctrl", "0"],
     "desc": ""
   },
   {
     "id": "zoomIn",
     "name": "Zoom In",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   {
     "id": "zoomOut",
     "name": "Zoom Out",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   {
     "id": "layerUp",
     "name": "Layer Up",
-    "keys": [
-      "shift",
-      "up"
-    ],
+    "keys": ["shift", "up"],
     "desc": ""
   },
   {
     "id": "layerDown",
     "name": "Layer Down",
-    "keys": [
-      "shift",
-      "down"
-    ],
+    "keys": ["shift", "down"],
     "desc": ""
   },
   {
     "id": "undo",
     "name": "Undo",
-    "keys": [
-      "ctrl",
-      "z"
-    ],
+    "keys": ["ctrl", "z"],
     "desc": ""
   },
   {
     "id": "redo",
     "name": "Redo",
-    "keys": [
-      "ctrl",
-      "y"
-    ],
+    "keys": ["ctrl", "y"],
     "desc": ""
   },
   {
     "id": "deleteItems",
     "name": "Delete",
-    "keys": [
-      "backspace"
-    ],
+    "keys": ["backspace"],
     "desc": ""
   },
   {
     "id": "duplicateItems",
     "name": "Duplicate",
-    "keys": [
-      "ctrl",
-      "d"
-    ],
+    "keys": ["ctrl", "d"],
     "desc": ""
   },
   {
     "id": "copyItems",
     "name": "Copy Selected Items",
-    "keys": [
-      "ctrl",
-      "c"
-    ],
+    "keys": ["ctrl", "c"],
     "desc": ""
   },
   {
     "id": "pasteItems",
     "name": "Paste Selected Items",
-    "keys": [
-      "ctrl",
-      "v"
-    ],
+    "keys": ["ctrl", "v"],
     "desc": ""
   },
   {
     "id": "selectAllItems",
     "name": "Select All Items",
-    "keys": [
-      "ctrl",
-      "a"
-    ],
+    "keys": ["ctrl", "a"],
     "desc": ""
   },
   {
     "id": "flipHorizontally",
     "name": "Flip Horizontally",
-    "keys": [
-      "shift",
-      "h"
-    ],
+    "keys": ["shift", "h"],
     "desc": ""
   },
   {
     "id": "flipVertically",
     "name": "Flip Vertically",
-    "keys": [
-      "shift",
-      "v"
-    ],
+    "keys": ["shift", "v"],
     "desc": ""
   }
 ]

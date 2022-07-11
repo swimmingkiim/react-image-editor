@@ -34,7 +34,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
   const stage = useStage();
   const { onDragMoveFrame, onDragEndFrame, checkIsInFrame } = useDragAndDrop(
     stage.stageRef,
-    stage.dragBackgroundOrigin
+    stage.dragBackgroundOrigin,
   );
   // const changeImageSrc = (base64: string) => {
   //   const newImage = new Image();
@@ -55,9 +55,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
     if (!data.attrs._filters) {
       return [Konva.Filters.Brighten];
     }
-    return data.attrs._filters.map(
-      (filterName: string) => filterMap[filterName]
-    );
+    return data.attrs._filters.map((filterName: string) => filterMap[filterName]);
   }, [data.attrs]);
 
   useEffect(() => {
@@ -78,14 +76,10 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
         let height;
         if (imageNode.width() > imageNode.height()) {
           width = decimalUpToSeven(512);
-          height = decimalUpToSeven(
-            width * (imageNode.height() / imageNode.width())
-          );
+          height = decimalUpToSeven(width * (imageNode.height() / imageNode.width()));
         } else {
           height = decimalUpToSeven(512);
-          width = decimalUpToSeven(
-            height * (imageNode.width() / imageNode.height())
-          );
+          width = decimalUpToSeven(height * (imageNode.width() / imageNode.height()));
         }
         imageNode.width(width);
         imageNode.height(height);
@@ -105,7 +99,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
 
   useEffect(() => {
     if (imageRef.current) {
-      stage.setStageRef(imageRef.current?.getStage()!);
+      stage.setStageRef(imageRef.current!.getStage()!);
       imageRef.current.brightness(data.attrs.brightness);
       checkIsInFrame(imageRef.current);
       imageRef.current.cache();

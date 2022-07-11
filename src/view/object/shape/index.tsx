@@ -24,19 +24,14 @@ export type ShapeItemProps = OverrideItemProps<{
   e?: DragEvent;
 }>;
 
-const ShapeItem: React.FC<ShapeItemProps> = ({
-  data,
-  e,
-  transformer,
-  onSelect,
-}) => {
+const ShapeItem: React.FC<ShapeItemProps> = ({ data, e, transformer, onSelect }) => {
   const { attrs } = data;
 
   const shapeRef = useRef() as RefObject<RegularPolygonType | RectType>;
   const stage = useStage();
   const { onDragMoveFrame, onDragEndFrame, checkIsInFrame } = useDragAndDrop(
     stage.stageRef,
-    stage.dragBackgroundOrigin
+    stage.dragBackgroundOrigin,
   );
 
   useEffect(() => {

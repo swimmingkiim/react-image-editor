@@ -1,128 +1,84 @@
 {
   "moveBackground": {
     "name": "배경 움직이기",
-    "keys": [
-      "spacebar",
-      "click & move"
-    ],
+    "keys": ["spacebar", "click & move"],
     "desc": ""
   },
   "resetZoom": {
     "name": "줌 초기화",
-    "keys": [
-      "ctrl",
-      "0"
-    ],
+    "keys": ["ctrl", "0"],
     "desc": ""
   },
   "zoomIn": {
     "name": "화면 확대",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   "zoomOut": {
     "name": "화면 축소",
-    "keys": [
-      "mouse wheel"
-    ],
+    "keys": ["mouse wheel"],
     "desc": ""
   },
   "layerUp": {
     "name": "레이어 올리기",
-    "keys": [
-      "shift",
-      "up"
-    ],
+    "keys": ["shift", "up"],
     "desc": ""
   },
   "layerDown": {
     "name": "레이어 내리기",
-    "keys": [
-      "shift",
-      "down"
-    ],
+    "keys": ["shift", "down"],
     "desc": ""
   },
   "deleteItems": {
     "name": "선택한 아이템 삭제",
-    "keys": [
-      "backspace"
-    ],
+    "keys": ["backspace"],
     "desc": ""
   },
   "duplicateItems": {
     "name": "선택한 아이템 복제",
-    "keys": [
-      "ctrl",
-      "d"
-    ],
+    "keys": ["ctrl", "d"],
     "desc": ""
   },
   "copyItems": {
     "name": "선택한 아이템 복사",
-    "keys": [
-      "ctrl",
-      "c"
-    ],
+    "keys": ["ctrl", "c"],
     "desc": ""
   },
   "pasteItems": {
     "name": "복사한 아이템 붙이기",
-    "keys": [
-      "ctrl",
-      "v"
-    ],
+    "keys": ["ctrl", "v"],
     "desc": ""
   },
   "selectAllItems": {
     "name": "모든 아이템 선택하기",
-    "keys": [
-      "ctrl",
-      "a"
-    ],
+    "keys": ["ctrl", "a"],
     "desc": ""
   },
   "flipHorizontally": {
     "name": "선택한 아이템 수평 반전",
-    "keys": [
-      "shift",
-      "h"
-    ],
+    "keys": ["shift", "h"],
     "desc": ""
   },
   "flipVertically": {
     "name": "선택한 아이템 수직 반전",
-    "keys": [
-      "shift",
-      "v"
-    ],
+    "keys": ["shift", "v"],
     "desc": ""
   },
   "undo": {
     "id": "undo",
     "name": "이전으로 되감기",
-    "keys": [
-      "ctrl",
-      "z"
-    ],
+    "keys": ["ctrl", "z"],
     "desc": ""
   },
   "redo": {
     "id": "redo",
     "name": "다시 앞으로 감기",
-    "keys": [
-      "ctrl",
-      "y"
-    ],
+    "keys": ["ctrl", "y"],
     "desc": ""
   },
   "remove-background": {
     "name": "선택한 이미지 배경제거",
-    "keys": [
-      "[왼쪽 버튼 중 사진 버튼 선택]"
-    ],
+    "keys": ["[왼쪽 버튼 중 사진 버튼 선택]"],
     "desc": "선택한 이미지 배경제거"
   }
 }

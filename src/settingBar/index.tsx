@@ -1,30 +1,28 @@
-import React from 'react';
-import { Accordion } from 'react-bootstrap';
-import { Node, NodeConfig } from 'konva/lib/Node';
-import Widget, { WidgetKind } from './Widget';
-import widgetList from '../config/widget.json';
-import FrameWidget from './widgetList/FrameWidget';
-import ImageWidget from './widgetList/ImageWidget';
-import ColorPaletteWidget from './widgetList/ColorPaletteWidget';
-import TextWidget from './widgetList/TextWidget';
-import AlignWidget from './widgetList/AlignWidget';
-import ExportWidget from './widgetList/ExportWidget';
-import useSelection from '../hook/useSelection';
-import useStage from '../hook/useStage';
-import ShapeWidget from './widgetList/ShapeWidget';
-import IconWidget from './widgetList/IconWidget';
-import LineWidget from './widgetList/LineWidget';
+import React from "react";
+import { Accordion } from "react-bootstrap";
+import { Node, NodeConfig } from "konva/lib/Node";
+import Widget, { WidgetKind } from "./Widget";
+import widgetList from "../config/widget.json";
+import FrameWidget from "./widgetList/FrameWidget";
+import ImageWidget from "./widgetList/ImageWidget";
+import ColorPaletteWidget from "./widgetList/ColorPaletteWidget";
+import TextWidget from "./widgetList/TextWidget";
+import AlignWidget from "./widgetList/AlignWidget";
+import ExportWidget from "./widgetList/ExportWidget";
+import useSelection from "../hook/useSelection";
+import useStage from "../hook/useStage";
+import ShapeWidget from "./widgetList/ShapeWidget";
+import IconWidget from "./widgetList/IconWidget";
+import LineWidget from "./widgetList/LineWidget";
 
 export type SettingBarProps = {
-    selectedItems: Node<NodeConfig>[];
-    clearSelection: ReturnType<typeof useSelection>['clearSelection'];
-    stageRef: ReturnType<typeof useStage>['stageRef'];
+  selectedItems: Node<NodeConfig>[];
+  clearSelection: ReturnType<typeof useSelection>["clearSelection"];
+  stageRef: ReturnType<typeof useStage>["stageRef"];
 };
 
 const Widgets = {
-  colorPalette: (data: WidgetKind & SettingBarProps) => (
-    <ColorPaletteWidget data={data} />
-  ),
+  colorPalette: (data: WidgetKind & SettingBarProps) => <ColorPaletteWidget data={data} />,
   align: (data: WidgetKind & SettingBarProps) => <AlignWidget data={data} />,
   image: (data: WidgetKind & SettingBarProps) => <ImageWidget />,
   frame: (data: WidgetKind & SettingBarProps) => <FrameWidget />,

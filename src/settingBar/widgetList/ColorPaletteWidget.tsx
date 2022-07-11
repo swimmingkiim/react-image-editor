@@ -1,45 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Button, Col, Figure, Form, OverlayTrigger, Row, Tooltip,
-} from 'react-bootstrap';
-import { Filter, Node, NodeConfig } from 'konva/lib/Node';
-import RangeSlider from 'react-bootstrap-range-slider';
-import { ColorResult, SketchPicker } from 'react-color';
-import { nanoid } from 'nanoid';
-import Konva from 'konva';
-import colorPaletteList from '../../config/colorPalette.json';
-import colorStyles from '../../style/color.module.css';
-import borderStyles from '../../style/border.module.css';
-import sizeStyles from '../../style/size.module.css';
-import spaceStyles from '../../style/space.module.css';
-import displayStyles from '../../style/display.module.css';
-import positionStyles from '../../style/position.module.css';
-import alignStyles from '../../style/align.module.css';
-import fontStyles from '../../style/font.module.css';
-import { WidgetKind } from '../Widget';
-import { SettingBarProps } from '..';
-import useItem from '../../hook/useItem';
-import useLocalStorage from '../../hook/useLocalStorage';
-import useI18n from '../../hook/usei18n';
+import React, { useEffect, useState } from "react";
+import { Button, Col, Figure, Form, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
+import { Filter, Node, NodeConfig } from "konva/lib/Node";
+import RangeSlider from "react-bootstrap-range-slider";
+import { ColorResult, SketchPicker } from "react-color";
+import { nanoid } from "nanoid";
+import Konva from "konva";
+import colorPaletteList from "../../config/colorPalette.json";
+import colorStyles from "../../style/color.module.css";
+import borderStyles from "../../style/border.module.css";
+import sizeStyles from "../../style/size.module.css";
+import spaceStyles from "../../style/space.module.css";
+import displayStyles from "../../style/display.module.css";
+import positionStyles from "../../style/position.module.css";
+import alignStyles from "../../style/align.module.css";
+import fontStyles from "../../style/font.module.css";
+import { WidgetKind } from "../Widget";
+import { SettingBarProps } from "..";
+import useItem from "../../hook/useItem";
+import useLocalStorage from "../../hook/useLocalStorage";
+import useI18n from "../../hook/usei18n";
 
 export type ColorPaletteKind = {
-    'data-item-type': string;
-    id: string;
-    colorCode: string;
-    selectedItems: Node<NodeConfig>[];
+  "data-item-type": string;
+  id: string;
+  colorCode: string;
+  selectedItems: Node<NodeConfig>[];
 };
 
 type ColorPaletteWidgetProps = {
-    data: WidgetKind & SettingBarProps;
+  data: WidgetKind & SettingBarProps;
 };
 
-export const COLOR_LIST_KEY = 'colorList';
+export const COLOR_LIST_KEY = "colorList";
 
 const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
   const { getValue, setValue } = useLocalStorage();
   const { updateItem } = useItem();
   const [showColorPicker, setShowColorPicker] = useState(false);
-  const [newColor, setNewColor] = useState<string>('#000000');
+  const [newColor, setNewColor] = useState<string>("#000000");
   const { getTranslation } = useI18n();
   const [colorList, setColorList] = useState(() => {
     if (getValue(COLOR_LIST_KEY)) {
@@ -65,7 +63,7 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
         ...colorList,
         {
           id: nanoid(),
-          type: 'color',
+          type: "color",
           colorCode: newColor,
         },
       ];
@@ -81,60 +79,53 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
     if (e.shiftKey) {
       data.selectedItems[0].attrs.stroke = undefined;
     } else {
-      data.selectedItems[0].attrs.fill = 'transparent';
+      data.selectedItems[0].attrs.fill = "transparent";
     }
-    updateItem(
-      data.selectedItems[0].id(),
-      (attrs) => data.selectedItems[0].attrs,
-    );
+    updateItem(data.selectedItems[0].id(), (attrs) => data.selectedItems[0].attrs);
   };
   return (
     <Col>
       <h6>
-        {getTranslation('widget', 'colorPalette', 'name')}
+        {getTranslation("widget", "colorPalette", "name")}
         <OverlayTrigger
           placement="bottom"
-          overlay={(
+          overlay={
             <Tooltip id="tooltip-clear-color">
-              {getTranslation('widget', 'colorPalette', 'addColor', 'name')}
+              {getTranslation("widget", "colorPalette", "addColor", "name")}
             </Tooltip>
-                      )}
-        >
+          }>
           <Button
             className={[
               colorStyles.transparentDarkColorTheme,
               borderStyles.none,
-              displayStyles['inline-block'],
+              displayStyles["inline-block"],
               sizeStyles.width10,
               spaceStyles.p0,
               spaceStyles.ml1rem,
-              alignStyles['text-left'],
-            ].join(' ')}
-            onClick={toggleColorPicker}
-          >
+              alignStyles["text-left"],
+            ].join(" ")}
+            onClick={toggleColorPicker}>
             <i className="bi-plus" />
           </Button>
         </OverlayTrigger>
         <OverlayTrigger
           placement="bottom"
-          overlay={(
+          overlay={
             <Tooltip id="tooltip-clear-color">
-              {getTranslation('widget', 'colorPalette', 'clearColor', 'name')}
+              {getTranslation("widget", "colorPalette", "clearColor", "name")}
             </Tooltip>
-                      )}
-        >
+          }>
           <Button
             className={[
               colorStyles.transparentDarkColorTheme,
               borderStyles.none,
-              displayStyles['inline-block'],
+              displayStyles["inline-block"],
               sizeStyles.width10,
               spaceStyles.p0,
               spaceStyles.ml1rem,
-              alignStyles['text-left'],
-            ].join(' ')}
-            onClick={onClearColorClick}
-          >
+              alignStyles["text-left"],
+            ].join(" ")}
+            onClick={onClearColorClick}>
             <i className="bi-x-circle" />
           </Button>
         </OverlayTrigger>
@@ -143,11 +134,9 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
         <SketchPicker
           color={newColor}
           onChange={changeNewColor}
-          className={[
-            positionStyles.absolute,
-            positionStyles.left0,
-            positionStyles.zIndex3,
-          ].join(' ')}
+          className={[positionStyles.absolute, positionStyles.left0, positionStyles.zIndex3].join(
+            " ",
+          )}
         />
       )}
       <Row xs={4}>
@@ -156,7 +145,7 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
             key={`colorPalette-thumbnail-${_data.id}`}
             data={{
               id: _data.id,
-              'data-item-type': 'color',
+              "data-item-type": "color",
               colorCode: _data.colorCode,
               selectedItems: data.selectedItems,
             }}
@@ -165,19 +154,19 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
       </Row>
       <ColorPaletteOpacitySlider
         data={{
-          'data-item-type': 'opacity',
+          "data-item-type": "opacity",
           selectedItems: data.selectedItems,
         }}
       />
       <ColorPaletteBrightnessSlider
         data={{
-          'data-item-type': 'brightness',
+          "data-item-type": "brightness",
           selectedItems: data.selectedItems,
         }}
       />
       <ColorPaletteGrayScaleToggle
         data={{
-          'data-item-type': 'grayScale',
+          "data-item-type": "grayScale",
           selectedItems: data.selectedItems,
         }}
       />
@@ -188,7 +177,7 @@ const ColorPaletteWidget: React.FC<ColorPaletteWidgetProps> = ({ data }) => {
 export default ColorPaletteWidget;
 
 const ColorPaletteThumbnail: React.FC<{
-    data: ColorPaletteKind;
+  data: ColorPaletteKind;
 }> = ({ data: { id, ...data } }) => {
   const { updateItem } = useItem();
 
@@ -208,17 +197,12 @@ const ColorPaletteThumbnail: React.FC<{
   };
 
   return (
-    <Figure
-      as={Col}
-      className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(' ')}
-    >
+    <Figure as={Col} className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}>
       <div
         onClick={onClickColorBlock}
         style={{ width: 20, height: 20, backgroundColor: data.colorCode }}
       />
-      <Figure.Caption
-        className={[fontStyles.fontHalf1em, 'text-center'].join(' ')}
-      >
+      <Figure.Caption className={[fontStyles.fontHalf1em, "text-center"].join(" ")}>
         {`${data.colorCode}`}
       </Figure.Caption>
     </Figure>
@@ -226,7 +210,7 @@ const ColorPaletteThumbnail: React.FC<{
 };
 
 const ColorPaletteOpacitySlider: React.FC<{
-    data: Omit<Omit<ColorPaletteKind, 'colorCode'>, 'id'>;
+  data: Omit<Omit<ColorPaletteKind, "colorCode">, "id">;
 }> = ({ data }) => {
   const { updateItem } = useItem();
   const { getTranslation } = useI18n();
@@ -238,8 +222,8 @@ const ColorPaletteOpacitySlider: React.FC<{
   useEffect(() => {
     setOpacity(
       data.selectedItems[0]
-            && data.selectedItems[0].attrs.opacity !== undefined
-            && data.selectedItems[0].attrs.opacity !== null
+        && data.selectedItems[0].attrs.opacity !== undefined
+        && data.selectedItems[0].attrs.opacity !== null
         ? data.selectedItems[0].attrs.opacity * 100
         : 100,
     );
@@ -260,7 +244,7 @@ const ColorPaletteOpacitySlider: React.FC<{
 
   return (
     <Col>
-      <h6>{getTranslation('widget', 'colorPalette', 'opacity', 'name')}</h6>
+      <h6>{getTranslation("widget", "colorPalette", "opacity", "name")}</h6>
       <RangeSlider
         tooltipLabel={(value) => `${value}%`}
         value={opacity}
@@ -271,7 +255,7 @@ const ColorPaletteOpacitySlider: React.FC<{
 };
 
 const ColorPaletteBrightnessSlider: React.FC<{
-    data: Omit<Omit<ColorPaletteKind, 'colorCode'>, 'id'>;
+  data: Omit<Omit<ColorPaletteKind, "colorCode">, "id">;
 }> = ({ data }) => {
   const { updateItem } = useItem();
   const { getTranslation } = useI18n();
@@ -285,8 +269,8 @@ const ColorPaletteBrightnessSlider: React.FC<{
   useEffect(() => {
     setBrightNess(
       data.selectedItems[0]
-            && data.selectedItems[0].attrs.brightness !== undefined
-            && data.selectedItems[0].attrs.brightness !== null
+        && data.selectedItems[0].attrs.brightness !== undefined
+        && data.selectedItems[0].attrs.brightness !== null
         ? data.selectedItems[0].attrs.brightness * 100
         : 0,
     );
@@ -307,7 +291,7 @@ const ColorPaletteBrightnessSlider: React.FC<{
 
   return (
     <Col>
-      <h6>{getTranslation('widget', 'colorPalette', 'brightness', 'name')}</h6>
+      <h6>{getTranslation("widget", "colorPalette", "brightness", "name")}</h6>
       <RangeSlider
         tooltipLabel={(value) => `${value}%`}
         value={brightness}
@@ -318,16 +302,16 @@ const ColorPaletteBrightnessSlider: React.FC<{
 };
 
 const ColorPaletteGrayScaleToggle: React.FC<{
-    data: Omit<Omit<ColorPaletteKind, 'colorCode'>, 'id'>;
+  data: Omit<Omit<ColorPaletteKind, "colorCode">, "id">;
 }> = ({ data }) => {
   const { updateItem } = useItem();
   const { getTranslation } = useI18n();
   const [grayScale, setGrayScale] = useState<boolean>(
-    !!(data.selectedItems[0]
-        && data.selectedItems[0].filters()
-        && data.selectedItems[0]
-          .filters()
-          .find((_filter) => _filter === Konva.Filters.Grayscale)),
+    !!(
+      data.selectedItems[0]
+      && data.selectedItems[0].filters()
+      && data.selectedItems[0].filters().find((_filter) => _filter === Konva.Filters.Grayscale)
+    ),
   );
 
   const onChangeGrayScale = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -336,11 +320,7 @@ const ColorPaletteGrayScaleToggle: React.FC<{
       return;
     }
     let newFilters: Filter[] = [];
-    if (
-      data.selectedItems[0]
-        .filters()
-        .find((_filter) => _filter === Konva.Filters.Grayscale)
-    ) {
+    if (data.selectedItems[0].filters().find((_filter) => _filter === Konva.Filters.Grayscale)) {
       data.selectedItems[0].filters(
         data.selectedItems[0]
           .filters()
@@ -350,14 +330,8 @@ const ColorPaletteGrayScaleToggle: React.FC<{
         .filters()
         .filter((_filter) => _filter !== Konva.Filters.Grayscale);
     } else {
-      data.selectedItems[0].filters([
-        ...data.selectedItems[0].filters(),
-        Konva.Filters.Grayscale,
-      ]);
-      newFilters = [
-        ...data.selectedItems[0].filters(),
-        Konva.Filters.Grayscale,
-      ];
+      data.selectedItems[0].filters([...data.selectedItems[0].filters(), Konva.Filters.Grayscale]);
+      newFilters = [...data.selectedItems[0].filters(), Konva.Filters.Grayscale];
     }
     updateItem(data.selectedItems[0].id(), () => ({
       ...data.selectedItems[0].attrs,
@@ -368,17 +342,17 @@ const ColorPaletteGrayScaleToggle: React.FC<{
 
   useEffect(() => {
     setGrayScale(
-      !!(data.selectedItems[0]
-            && data.selectedItems[0].filters()
-            && data.selectedItems[0]
-              .filters()
-              .find((_filter) => _filter === Konva.Filters.Grayscale)),
+      !!(
+        data.selectedItems[0]
+        && data.selectedItems[0].filters()
+        && data.selectedItems[0].filters().find((_filter) => _filter === Konva.Filters.Grayscale)
+      ),
     );
   }, [data.selectedItems]);
 
   return (
     <Col>
-      <h6>{getTranslation('widget', 'colorPalette', 'grayScale', 'name')}</h6>
+      <h6>{getTranslation("widget", "colorPalette", "grayScale", "name")}</h6>
       <Form>
         <Form.Check
           checked={grayScale}

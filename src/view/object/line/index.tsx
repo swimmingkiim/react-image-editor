@@ -24,12 +24,7 @@ export type LineItemProps = OverrideItemProps<{
   e?: DragEvent;
 }>;
 
-const LineItem: React.FC<LineItemProps> = ({
-  data,
-  e,
-  transformer,
-  onSelect,
-}) => {
+const LineItem: React.FC<LineItemProps> = ({ data, e, transformer, onSelect }) => {
   const {
     attrs: { updatedAt, zIndex, points, ...attrs },
   } = data;
@@ -44,14 +39,7 @@ const LineItem: React.FC<LineItemProps> = ({
     } else if (points.length === 6) {
       ctx.quadraticCurveTo(points[2], points[3], points[4], points[5]);
     } else {
-      ctx.bezierCurveTo(
-        points[2],
-        points[3],
-        points[4],
-        points[5],
-        points[6],
-        points[7]
-      );
+      ctx.bezierCurveTo(points[2], points[3], points[4], points[5], points[6], points[7]);
     }
     shape.strokeWidth(4);
     ctx.fillStrokeShape(shape);
@@ -70,7 +58,7 @@ const LineItem: React.FC<LineItemProps> = ({
       }));
       e.target.getLayer()?.batchDraw();
     },
-    [data]
+    [data],
   );
 
   return (

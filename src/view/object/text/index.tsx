@@ -23,12 +23,7 @@ export type TextItemProps = OverrideItemProps<{
   e?: DragEvent;
 }>;
 
-const TextItem: React.FC<TextItemProps> = ({
-  data,
-  e,
-  transformer,
-  onSelect,
-}) => {
+const TextItem: React.FC<TextItemProps> = ({ data, e, transformer, onSelect }) => {
   const { attrs } = data;
 
   const textRef = useRef() as RefObject<Konva.Text>;
@@ -67,20 +62,12 @@ const TextItem: React.FC<TextItemProps> = ({
       .reduce(
         (acc, curr) =>
           curr.charCodeAt(0) >= 32 && curr.charCodeAt(0) <= 126
-            ? acc +
-              textRef.current!.fontSize() *
-                stage!.scaleY() *
-                textRef.current!.scaleY() *
-                (3 / 5)
-            : acc +
-              textRef.current!.fontSize() *
-                stage!.scaleY() *
-                textRef.current!.scaleY(),
-        0
+            ? acc
+              + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY() * (3 / 5)
+            : acc + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY(),
+        0,
       )}px`;
-    textarea.style.height = `${
-      textRef.current.height() + textRef.current.padding() * 2 + 5
-    }px`;
+    textarea.style.height = `${textRef.current.height() + textRef.current.padding() * 2 + 5}px`;
     textarea.style.border = "none";
     textarea.style.padding = "0px";
     textarea.style.margin = "0px";
@@ -123,12 +110,8 @@ const TextItem: React.FC<TextItemProps> = ({
       transformer.transformerRef.current!.show();
       updateItem(textRef.current!.id(), () => ({
         ...textRef.current!.attrs,
-        width:
-          textarea.getBoundingClientRect().width /
-          stage!.scaleY() /
-          textRef.current!.scaleY(),
-        height:
-          textarea.value.split("\n").length * textRef.current!.fontSize() * 1.2,
+        width: textarea.getBoundingClientRect().width / stage!.scaleY() / textRef.current!.scaleY(),
+        height: textarea.value.split("\n").length * textRef.current!.fontSize() * 1.2,
         updatedAt: Date.now(),
       }));
       textarea.parentNode!.removeChild(textarea);
@@ -142,23 +125,14 @@ const TextItem: React.FC<TextItemProps> = ({
         .reduce(
           (acc, curr) =>
             curr.charCodeAt(0) >= 32 && curr.charCodeAt(0) <= 126
-              ? acc +
-                textRef.current!.fontSize() *
-                  stage!.scaleY() *
-                  textRef.current!.scaleY() *
-                  (3 / 5)
-              : acc +
-                textRef.current!.fontSize() *
-                  stage!.scaleY() *
-                  textRef.current!.scaleY(),
-          0
+              ? acc
+                + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY() * (3 / 5)
+              : acc + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY(),
+          0,
         );
       // some extra fixes on different browsers
-      const isSafari = /^((?!chrome|android).)*safari/i.test(
-        navigator.userAgent
-      );
-      const isFirefox =
-        navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      const isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
       if (isSafari || isFirefox) {
         newWidth = Math.ceil(newWidth);
       }
@@ -174,16 +148,10 @@ const TextItem: React.FC<TextItemProps> = ({
         .reduce(
           (acc, curr) =>
             curr.charCodeAt(0) >= 32 && curr.charCodeAt(0) <= 126
-              ? acc +
-                textRef.current!.fontSize() *
-                  stage!.scaleY() *
-                  textRef.current!.scaleY() *
-                  (3 / 5)
-              : acc +
-                textRef.current!.fontSize() *
-                  stage!.scaleY() *
-                  textRef.current!.scaleY(),
-          0
+              ? acc
+                + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY() * (3 / 5)
+              : acc + textRef.current!.fontSize() * stage!.scaleY() * textRef.current!.scaleY(),
+          0,
         )}px`;
     });
 
@@ -203,9 +171,7 @@ const TextItem: React.FC<TextItemProps> = ({
     textarea.addEventListener("keydown", (e) => {
       setTextareaWidth();
       textarea.style.height = "auto";
-      textarea.style.height = `${
-        textarea.scrollHeight + textRef!.current!.fontSize()
-      }px`;
+      textarea.style.height = `${textarea.scrollHeight + textRef!.current!.fontSize()}px`;
     });
 
     function handleOutsideClick(e: MouseEvent) {
@@ -233,7 +199,7 @@ const TextItem: React.FC<TextItemProps> = ({
       }));
       e.target.getLayer()?.batchDraw();
     },
-    [data]
+    [data],
   );
 
   const onClickText = (e: KonvaEventObject<MouseEvent>) => {

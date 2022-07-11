@@ -18,9 +18,7 @@
           "updatedAt": 1648525979355,
           "id": "78coJjYhJhc9VQOAj3DyF",
           "opacity": 1,
-          "filters": [
-            null
-          ],
+          "filters": [null],
           "draggable": true,
           "rotation": 0,
           "scaleX": 1,
@@ -45,11 +43,7 @@
           "src": "find:LdygWYCzE1zg4Q0FqaFlf",
           "zIndex": 0,
           "brightness": 0,
-          "_filters": [
-            "Brighten",
-            "Grayscale",
-            "Grayscale"
-          ],
+          "_filters": ["Brighten", "Grayscale", "Grayscale"],
           "updatedAt": 1648525991247,
           "image": {},
           "data-frame-type": "image",
@@ -57,11 +51,7 @@
           "fill": "transparent",
           "opacity": 1,
           "rotation": 0,
-          "filters": [
-            null,
-            null,
-            null
-          ],
+          "filters": [null, null, null],
           "draggable": true,
           "scaleX": 2.5275796797500503,
           "scaleY": 2.5275796797500503,

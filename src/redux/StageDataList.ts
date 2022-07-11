@@ -1,30 +1,28 @@
-import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Epic, ofType } from 'redux-observable';
-import { take, tap } from 'rxjs';
-import { StageData } from './currentStageData';
-import { StoreState } from './store';
+import { createEntityAdapter, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Epic, ofType } from "redux-observable";
+import { take, tap } from "rxjs";
+import { StageData } from "./currentStageData";
+import { StoreState } from "./store";
 
-export const STAGE_LIST_PREFIX = 'STAGE_LIST';
+export const STAGE_LIST_PREFIX = "STAGE_LIST";
 
 export type StageDataListItem = {
-    id: string;
-    data: StageData[];
+  id: string;
+  data: StageData[];
 };
 
-export const stageDataListEpic: Epic = (action$, state$) => action$.pipe(
-  ofType(stageDataListAction.addItem.type),
-  take(1),
-  tap((action$) => console.log(action$.payload)),
-);
+export const stageDataListEpic: Epic = (action$, state$) =>
+  action$.pipe(
+    ofType(stageDataListAction.addItem.type),
+    take(1),
+    tap((action$) => console.log(action$.payload)),
+  );
 
 export const stageDataListEntity = createEntityAdapter<StageDataListItem>();
 
 export const stageDataListSlice = createSlice({
   name: STAGE_LIST_PREFIX,
-  initialState: stageDataListEntity.setAll(
-    stageDataListEntity.getInitialState(),
-    [],
-  ),
+  initialState: stageDataListEntity.setAll(stageDataListEntity.getInitialState(), []),
   reducers: {
     initialize(state, action) {
       stageDataListEntity.setAll(state, action.payload);

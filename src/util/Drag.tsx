@@ -1,22 +1,22 @@
-import React from 'react';
-import { onDragStart } from './eventHandler/dragAndDrop';
+import React from "react";
+import { onDragStart } from "./eventHandler/dragAndDrop";
 
 export type DragSrc = {
-    trigger: string;
+  trigger: string;
 } & {
-    [key: string]: any
+  [key: string]: any;
 };
 
 type DragProps = {
-    dragType: DataTransfer['effectAllowed'];
-    dragSrc: DragSrc;
-    children: React.ReactNode;
-}
+  dragType: DataTransfer["effectAllowed"];
+  dragSrc: DragSrc;
+  children: React.ReactNode;
+};
 
 const Drag: React.FC<DragProps> = ({ dragType, dragSrc, children }) => {
   const extendedProps = {
     draggable: true,
-    'data-drag-src': JSON.stringify(dragSrc),
+    "data-drag-src": JSON.stringify(dragSrc),
     onDragStart: onDragStart(dragType),
   };
 
@@ -28,11 +28,7 @@ const Drag: React.FC<DragProps> = ({ dragType, dragSrc, children }) => {
     return newChild;
   });
 
-  return (
-    <>
-      {childrenWithProps}
-    </>
-  );
+  return <>{childrenWithProps}</>;
 };
 
 export default Drag;

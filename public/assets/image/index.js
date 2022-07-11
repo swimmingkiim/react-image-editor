@@ -6,7 +6,7 @@ function main() {
     type: "image",
     id: `sample-image-${idx + 1}`,
     name: `sample-image-${idx + 1}`,
-    src: filename
+    src: filename,
   }));
   fs.writeFileSync("../../../src/config/image.json", JSON.stringify(result));
 }

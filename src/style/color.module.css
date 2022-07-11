@@ -1,36 +1,36 @@
 @import "./theme.module.css";
 
 .darkTheme {
-    background-color: var(--color-dark) !important;
-    color: var(--color-light) !important;
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
 }
 
 .lightTheme {
-    background-color: var(--color-light) !important;
-    color: var(--color-dark) !important;
+  background-color: var(--color-light) !important;
+  color: var(--color-dark) !important;
 }
 
 .greyTheme {
-    background-color: var(--color-grey) !important;
-    color: var(--color-dark) !important;
+  background-color: var(--color-grey) !important;
+  color: var(--color-dark) !important;
 }
 
 .whiteTheme {
-    background-color: var(--color-white) !important;
-    color: var(--color-dark) !important;
+  background-color: var(--color-white) !important;
+  color: var(--color-dark) !important;
 }
 
 .contrastTheme {
-    background-color: var(--color-contrast) !important;
-    color: var(--color-light) !important;
+  background-color: var(--color-contrast) !important;
+  color: var(--color-light) !important;
 }
 
 .transparentTheme {
-    background-color: transparent !important;
-    color: var(--color-light) !important;
+  background-color: transparent !important;
+  color: var(--color-light) !important;
 }
 
 .transparentDarkColorTheme {
-    background-color: transparent !important;
-    color: var(--color-dark) !important;
+  background-color: transparent !important;
+  color: var(--color-dark) !important;
 }

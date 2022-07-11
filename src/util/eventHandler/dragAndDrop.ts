@@ -1,16 +1,17 @@
-import { KonvaEventObject } from 'konva/lib/Node';
-import React from 'react';
-import { DragSrc } from '../Drag';
+import { KonvaEventObject } from "konva/lib/Node";
+import React from "react";
+import { DragSrc } from "../Drag";
 
-export const onDragStart = (dataTransferType: DataTransfer['effectAllowed']) => (e: React.DragEvent<HTMLElement>) => {
-  if (!e.currentTarget.dataset.dragSrc) {
-    return;
-  }
+export const onDragStart
+  = (dataTransferType: DataTransfer["effectAllowed"]) => (e: React.DragEvent<HTMLElement>) => {
+    if (!e.currentTarget.dataset.dragSrc) {
+      return;
+    }
     e.dataTransfer!.effectAllowed = dataTransferType;
-    e.dataTransfer!.setData('text/plain', e.currentTarget.dataset.dragSrc);
-};
+    e.dataTransfer!.setData("text/plain", e.currentTarget.dataset.dragSrc);
+  };
 
-export const onDragOver = (dataTransferType: DataTransfer['dropEffect']) => (e: DragEvent) => {
+export const onDragOver = (dataTransferType: DataTransfer["dropEffect"]) => (e: DragEvent) => {
   e.preventDefault();
   if (!e.dataTransfer) {
     return;
@@ -25,12 +26,13 @@ export const onDrop = (callback: DropCallback) => (e: DragEvent) => {
   if (!e.dataTransfer) {
     return;
   }
-  const dragSrc = e.dataTransfer.getData('text/plain');
+  const dragSrc = e.dataTransfer.getData("text/plain");
   callback(JSON.parse(dragSrc), e);
 };
 
 export const defaultOnMouseDown = (e: KonvaEventObject<MouseEvent>) => {
-  if (e.currentTarget.getStage()?.draggable()) { // true if user dragging background
+  if (e.currentTarget.getStage()?.draggable()) {
+    // true if user dragging background
     e.currentTarget.draggable(false);
   }
 };

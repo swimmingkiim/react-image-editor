@@ -28,7 +28,7 @@ const Frame: React.FC<FrameProps> = ({ data, e, onSelect }) => {
   const stage = useStage();
   const { checkIsInFrame, moveToLayer, getItemsInThisFrame } = useDragAndDrop(
     stage.stageRef,
-    stage.dragBackgroundOrigin
+    stage.dragBackgroundOrigin,
   );
   const frameRef = useRef() as RefObject<Konva.Rect>;
   const initialPosition = {
@@ -36,21 +36,15 @@ const Frame: React.FC<FrameProps> = ({ data, e, onSelect }) => {
     y: attrs.y,
   };
 
-  const onMouseOverLabelText = useCallback(
-    (e: KonvaEventObject<MouseEvent>) => {
-      (e.target as Konva.Text).fill("blue");
-      e.target.getLayer().batchDraw();
-    },
-    []
-  );
+  const onMouseOverLabelText = useCallback((e: KonvaEventObject<MouseEvent>) => {
+    (e.target as Konva.Text).fill("blue");
+    e.target.getLayer().batchDraw();
+  }, []);
 
-  const onMouseLeaveLabelText = useCallback(
-    (e: KonvaEventObject<MouseEvent>) => {
-      (e.target as Konva.Text).fill("#000000");
-      e.target.getLayer().batchDraw();
-    },
-    []
-  );
+  const onMouseLeaveLabelText = useCallback((e: KonvaEventObject<MouseEvent>) => {
+    (e.target as Konva.Text).fill("#000000");
+    e.target.getLayer().batchDraw();
+  }, []);
 
   const clipFunc = (ctx: Context) => {
     const position = attrs;
@@ -85,16 +79,14 @@ const Frame: React.FC<FrameProps> = ({ data, e, onSelect }) => {
       e.target.getParent().clipFunc(e.target.getLayer().Context);
       e.target.getLayer()?.batchDraw();
     },
-    [data]
+    [data],
   );
 
   useEffect(() => {
     if (frameRef.current) {
       stage.setStageRef(frameRef.current.getStage()!);
       frameRef.current.brightness(data.attrs.brightness);
-      frameRef.current
-        .findAncestor("Group")
-        .clipFunc(frameRef.current.getLayer()!.getContext());
+      frameRef.current.findAncestor("Group").clipFunc(frameRef.current.getLayer()!.getContext());
       frameRef.current.cache();
     }
   }, [data]);
@@ -104,8 +96,7 @@ const Frame: React.FC<FrameProps> = ({ data, e, onSelect }) => {
       <Label
         x={frameRef.current?.x() ?? initialPosition.x}
         y={frameRef.current?.y() ?? initialPosition.y}
-        onClick={onSelect}
-      >
+        onClick={onSelect}>
         <Tag name="label-tag" pointerDirection="left" />
         <Text
           text={attrs["data-frame-type"]}
@@ -144,12 +135,7 @@ const Frame: React.FC<FrameProps> = ({ data, e, onSelect }) => {
 
 export default Frame;
 
-export const getFramePos = (
-  stage: Konva.Stage,
-  e: DragEvent,
-  width?: number,
-  height?: number
-) => {
+export const getFramePos = (stage: Konva.Stage, e: DragEvent, width?: number, height?: number) => {
   stage.setPointersPositions(e);
   const stageOrigin = stage.getAbsolutePosition();
   const mousePosition = stage.getPointerPosition();
@@ -166,11 +152,7 @@ export const getFramePos = (
     };
   }
   return {
-    x: decimalUpToSeven(
-      (mousePosition.x - stageOrigin.x) / stage.scaleX() - width / 2
-    ),
-    y: decimalUpToSeven(
-      (mousePosition.y - stageOrigin.y) / stage.scaleY() - height / 2
-    ),
+    x: decimalUpToSeven((mousePosition.x - stageOrigin.x) / stage.scaleX() - width / 2),
+    y: decimalUpToSeven((mousePosition.y - stageOrigin.y) / stage.scaleY() - height / 2),
   };
 };

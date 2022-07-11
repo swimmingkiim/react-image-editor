@@ -1,15 +1,15 @@
 .auto {
-    overflow: auto;
+  overflow: auto;
 }
 
 .auto-y {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .auto-x {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 .hide {
-    overflow: hidden;
+  overflow: hidden;
 }

@@ -1,28 +1,27 @@
 .p0 {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .p05em {
-    padding: 0.5em !important;
+  padding: 0.5em !important;
 }
 
 .ml1rem {
-    margin-left: 1rem !important;
+  margin-left: 1rem !important;
 }
 
 .pl1rem {
-    padding-left: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 .pr1rem {
-    padding-right: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 .pt1rem {
-    padding-top: 1rem !important;
+  padding-top: 1rem !important;
 }
 
 .mt1rem {
-    margin-top: 1rem !important;
+  margin-top: 1rem !important;
 }
-
