@@ -48,6 +48,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
+    "lint": "eslint --config ./.eslintrc.json ./src",
+    "lint:fix": "eslint --fix --config ./.eslintrc.json ./src",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
