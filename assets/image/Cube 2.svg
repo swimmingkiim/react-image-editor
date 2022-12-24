@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="232px" height="124px" viewBox="0 0 232 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Objects/Seat/Cube 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Objects/Seat/Cube-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M59,0 L174,0 C182.836556,-1.623249e-15 190,7.163444 190,16 L190,108 C190,116.836556 182.836556,124 174,124 L59,124 C50.163444,124 43,116.836556 43,108 L43,16 C43,7.163444 50.163444,1.623249e-15 59,0 Z M75,28 C72.790861,28 71,29.790861 71,32 L71,92 C71,94.209139 72.790861,96 75,96 L158,96 C160.209139,96 162,94.209139 162,92 L162,32 C162,29.790861 160.209139,28 158,28 L75,28 Z" id="Seat" fill="#C5CFD6"></path>
+    </g>
+</svg>

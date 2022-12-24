@@ -6,7 +6,7 @@ function main() {
     type: "icon",
     id: filename.replace(".svg", ""),
     name: filename.replace(".svg", "").replaceAll("-", " "),
-    icon: filename
+    icon: filename,
   }));
   fs.writeFileSync("../../../../src/config/icon.json", JSON.stringify(result));
 }

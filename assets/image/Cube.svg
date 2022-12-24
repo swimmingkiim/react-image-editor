@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="232px" height="124px" viewBox="0 0 232 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Objects/Seat/Cube</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Objects/Seat/Cube" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Seat" transform="translate(55.000000, 0.000000)">
+            <polygon id="Seat-Stuff" fill="#C5CFD6" points="27.6226415 0 104.877193 0 115 124 0 124"></polygon>
+            <polygon id="Seat-Stuff" fill-opacity="0.1" fill="#000000" points="27.6226415 0 51.3828011 0 65.6037736 124 0 124"></polygon>
+        </g>
+    </g>
+</svg>
