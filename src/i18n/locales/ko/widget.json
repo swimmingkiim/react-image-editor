@@ -172,6 +172,90 @@
       "id": "tumblrPostImage",
       "width": 500,
       "height": 750
+    },
+    "androidAppIcon": {
+      "name": "안드로이드 앱 아이콘",
+      "id": "androidAppIcon",
+      "width": 512,
+      "height": 512
+    },
+    "androidFeatureGraphic": {
+      "name": "안드로이드 그래픽",
+      "id": "androidFeatureGraphic",
+      "width": 1024,
+      "height": 500
+    },
+    "androidHorizontal": {
+      "name": "안드로이드 가로 스크린샷",
+      "id": "androidHorizontal",
+      "width": 1920,
+      "height": 1080
+    },
+    "androidVertical": {
+      "name": "안드로이드 세로 스크린샷",
+      "id": "androidVertical",
+      "width": 1080,
+      "height": 1920
+    },
+    "iosIPhoneVertical6_5": {
+      "name": "아이폰 세로 6.5인치",
+      "id": "iosIPhoneVertical6_5",
+      "width": 1284,
+      "height": 2778
+    },
+    "iosIPhoneVertical5_8": {
+      "name": "아이폰 세로 5.8인치",
+      "id": "iosIPhoneVertical5_8",
+      "width": 1170,
+      "height": 2532
+    },
+    "iosIPhoneVertical5_5": {
+      "name": "아이폰 세로 5.5인치",
+      "id": "iosIPhoneVertical5_5",
+      "width": 1242,
+      "height": 2208
+    },
+    "iosIPhoneVertical4_7": {
+      "name": "아이폰 세로 4.7인치",
+      "id": "iosIPhoneVertical4_7",
+      "width": 750,
+      "height": 1334
+    },
+    "iosIPhoneVertical4": {
+      "name": "아이폰 세로 4인치",
+      "id": "iosIPhoneVertical4",
+      "width": 640,
+      "height": 1136
+    },
+    "iosIPhoneVertical3_5": {
+      "name": "아이폰 세로 3.5인치",
+      "id": "iosIPhoneVertical3_5",
+      "width": 640,
+      "height": 960
+    },
+    "iosIPadVertical12_9": {
+      "name": "아이폰 세로 12.9인치",
+      "id": "iosIPadVertical12_9",
+      "width": 2048,
+      "height": 2732
+    },
+    "iosIPadVertical11": {
+      "name": "아이폰 세로 11인치",
+      "id": "iosIPadVertical11",
+      "width": 1640,
+      "height": 2360
+    },
+    "iosIPadVertical10_5": {
+      "name": "아이폰 세로 10.5인치",
+      "id": "iosIPadVertical10_5",
+      "width": 1668,
+      "height": 2224
+    },
+    "iosIPadVertical9_7": {
+      "name": "아이폰 세로 9.7인치",
+      "id": "iosIPadVertical9_7",
+      "width": 1536,
+      "height": 2048
     }
   },
   "shape": {

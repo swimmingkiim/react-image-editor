@@ -124,5 +124,89 @@
     "id": "tumblrPostImage",
     "width": 500,
     "height": 750
+  },
+  {
+    "type": "Android App Icon",
+    "id": "androidAppIcon",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "type": "Android Feature Graphic",
+    "id": "androidFeatureGraphic",
+    "width": 1024,
+    "height": 500
+  },
+  {
+    "type": "Android Horizontal",
+    "id": "androidHorizontal",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "type": "Android Vertical",
+    "id": "androidVertical",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "type": "iOS iPhone Vertical (6.5 inch)",
+    "id": "iosIPhoneVertical6_5",
+    "width": 1284,
+    "height": 2778
+  },
+  {
+    "type": "iOS iPhone Vertical (5.8 inch)",
+    "id": "iosIPhoneVertical5_8",
+    "width": 1170,
+    "height": 2532
+  },
+  {
+    "type": "iOS iPhone Vertical (5.5 inch)",
+    "id": "iosIPhoneVertical5_5",
+    "width": 1242,
+    "height": 2208
+  },
+  {
+    "type": "iOS iPhone Vertical (4.7 inch)",
+    "id": "iosIPhoneVertical4_7",
+    "width": 750,
+    "height": 1334
+  },
+  {
+    "type": "iOS iPhone Vertical (4 inch)",
+    "id": "iosIPhoneVertical4",
+    "width": 640,
+    "height": 1136
+  },
+  {
+    "type": "iOS iPhone Vertical (3.5 inch)",
+    "id": "iosIPhoneVertical3_5",
+    "width": 640,
+    "height": 960
+  },
+  {
+    "type": "iOS iPad Vertical (12.9 inch)",
+    "id": "iosIPadVertical12_9",
+    "width": 2048,
+    "height": 2732
+  },
+  {
+    "type": "iOS iPad Vertical (11 inch)",
+    "id": "iosIPadVertical11",
+    "width": 1640,
+    "height": 2360
+  },
+  {
+    "type": "iOS iPad Vertical (10.5 inch)",
+    "id": "iosIPadVertical10_5",
+    "width": 1668,
+    "height": 2224
+  },
+  {
+    "type": "iOS iPad Vertical (9.7 inch)",
+    "id": "iosIPadVertical9_7",
+    "width": 1536,
+    "height": 2048
   }
 ]
