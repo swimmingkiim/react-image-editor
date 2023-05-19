@@ -197,6 +197,12 @@
       "width": 1080,
       "height": 1920
     },
+    "iosIPhoneVertical6_7": {
+      "name": "iOS iPhone Vertical (6.7 inch)",
+      "id": "iosIPhoneVertical6_7",
+      "width": 1284,
+      "height": 2778
+    },
     "iosIPhoneVertical6_5": {
       "name": "iOS iPhone Vertical (6.5 inch)",
       "id": "iosIPhoneVertical6_5",
