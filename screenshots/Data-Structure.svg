@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1366"
+   height="768"
+   viewBox="0 0 1366 768"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   sodipodi:docname="Data-Structure.svg"
+   inkscape:export-filename="Data-Structure.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.91215227"
+     inkscape:cx="654.49599"
+     inkscape:cy="353.55939"
+     inkscape:window-width="1920"
+     inkscape:window-height="949"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1066" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="레이어 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffaaee;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+       id="rect234"
+       width="1167.5682"
+       height="612.8363"
+       x="106.3419"
+       y="82.223114" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+       x="240"
+       y="150"
+       id="text906"><tspan
+         sodipodi:role="line"
+         id="tspan904"
+         x="240"
+         y="150">Canvas</tspan></text>
+    <g
+       id="g1150"
+       transform="translate(-20)">
+      <g
+         id="g1136">
+        <rect
+           style="fill:#ffeeaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect842"
+           width="345.33707"
+           height="464.83466"
+           x="154.57945"
+           y="172.12039" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="218.69606"
+           y="230.92"
+           id="text1070"><tspan
+             sodipodi:role="line"
+             id="tspan1068"
+             x="218.69606"
+             y="230.92">Tab</tspan></text>
+      </g>
+      <g
+         id="g1126"
+         style="fill:#ffaaaa;fill-opacity:1">
+        <rect
+           style="fill:#ffaaaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none;fill-opacity:1"
+           id="rect844"
+           width="298.19583"
+           height="142.52007"
+           x="170.80417"
+           y="246.47993" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none;fill-opacity:1"
+           x="260"
+           y="340"
+           id="text1074"><tspan
+             sodipodi:role="line"
+             id="tspan1072"
+             x="260"
+             y="340">Data</tspan></text>
+      </g>
+      <g
+         id="g1131"
+         style="fill:#aaeeff">
+        <rect
+           style="fill:#aaeeff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect846"
+           width="298.19583"
+           height="209.39487"
+           x="170.80417"
+           y="401" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="290"
+           y="460"
+           id="text1074-7"><tspan
+             sodipodi:role="line"
+             id="tspan1072-6"
+             x="290"
+             y="460">History</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+       x="197.33546"
+       y="495.53131"
+       id="text1105"><tspan
+         sodipodi:role="line"
+         id="tspan1103"
+         x="197.33546"
+         y="495.53131" /></text>
+    <g
+       id="g1176"
+       transform="translate(370)">
+      <g
+         id="g1158"
+         style="fill:#ffeeaa">
+        <rect
+           style="fill:#ffeeaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1152"
+           width="345.33707"
+           height="464.83466"
+           x="154.57945"
+           y="172.12039" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="218.69606"
+           y="230.92"
+           id="text1156"><tspan
+             sodipodi:role="line"
+             id="tspan1154"
+             x="218.69606"
+             y="230.92">Tab</tspan></text>
+      </g>
+      <g
+         id="g1166">
+        <rect
+           style="fill:#ffaaaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1160"
+           width="298.19583"
+           height="142.52007"
+           x="170.80417"
+           y="246.47993" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="260"
+           y="340"
+           id="text1164"><tspan
+             sodipodi:role="line"
+             id="tspan1162"
+             x="260"
+             y="340">Data</tspan></text>
+      </g>
+      <g
+         id="g1174">
+        <rect
+           style="fill:#aaeeff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1168"
+           width="298.19583"
+           height="209.39487"
+           x="170.80417"
+           y="401" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="290"
+           y="460"
+           id="text1172"><tspan
+             sodipodi:role="line"
+             id="tspan1170"
+             x="290"
+             y="460">History</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1202"
+       transform="translate(740)">
+      <g
+         id="g1184"
+         style="fill:#ffeeaa">
+        <rect
+           style="fill:#ffeeaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1178"
+           width="345.33707"
+           height="464.83466"
+           x="154.57945"
+           y="172.12039" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="218.69606"
+           y="230.92"
+           id="text1182"><tspan
+             sodipodi:role="line"
+             id="tspan1180"
+             x="218.69606"
+             y="230.92">Tab</tspan></text>
+      </g>
+      <g
+         id="g1192"
+         style="fill:#ffaaaa">
+        <rect
+           style="fill:#ffaaaa;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1186"
+           width="298.19583"
+           height="142.52007"
+           x="170.80417"
+           y="246.47993" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="260"
+           y="340"
+           id="text1190"><tspan
+             sodipodi:role="line"
+             id="tspan1188"
+             x="260"
+             y="340">Data</tspan></text>
+      </g>
+      <g
+         id="g1200">
+        <rect
+           style="fill:#aaeeff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           id="rect1194"
+           width="298.19583"
+           height="209.39487"
+           x="170.80417"
+           y="401" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+           x="290"
+           y="460"
+           id="text1198"><tspan
+             sodipodi:role="line"
+             id="tspan1196"
+             x="290"
+             y="460">History</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:'Apple SD Gothic Neo';-inkscape-font-specification:'Apple SD Gothic Neo, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-miterlimit:25;stroke-dasharray:none"
+       x="250"
+       y="70"
+       id="text1206"><tspan
+         sodipodi:role="line"
+         id="tspan1204"
+         x="250"
+         y="70">Data Structure</tspan></text>
+  </g>
+</svg>
