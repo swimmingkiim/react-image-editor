@@ -1,0 +1,44 @@
+{
+  "name": "react-image-editor",
+  "version": "1.0.0",
+  "description": "React + Konva / image editor / like Figma or Canva",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.1",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/react": "^18.2.12",
+    "react": "^18.2.0",
+    "rollup": "^3.25.1",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  },
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swimmingkiim/react-image-editor.git"
+  },
+  "keywords": [
+    "react",
+    "editor",
+    "image",
+    "canvas",
+    "tool",
+    "konva",
+    "figma",
+    "canva"
+  ],
+  "author": "swimmingkiim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swimmingkiim/react-image-editor/issues"
+  },
+  "homepage": "https://github.com/swimmingkiim/react-image-editor#readme"
+}
