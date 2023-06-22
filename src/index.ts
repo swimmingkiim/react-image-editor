@@ -1,2 +1,8 @@
-export const testFunc = () => console.log('this is test function');
+import canvasModules from './core/canvas';
+
+const  modules = {
+  ...canvasModules,
+};
+
+export default modules;
 
