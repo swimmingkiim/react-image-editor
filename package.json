@@ -4,7 +4,7 @@
   "description": "React + Konva / image editor / like Figma or Canva",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/esm/types/index.d.ts",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.1",
     "@rollup/plugin-node-resolve": "^15.1.0",
