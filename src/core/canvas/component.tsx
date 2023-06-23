@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createContext } from "react";
+import { createContext, useEffect, useRef, useCallback } from "react";
 
 import { ReactImageEditor } from "./canvas";
 
@@ -9,16 +9,35 @@ export const ReactImageEditorCanvasContext = createContext<
 
 export type ReactImageEditorCanvasProps = {
   reactImageEditor: ReactImageEditor;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const ReactImageEditorCanvas = ({
   children,
   ...props
 }: ReactImageEditorCanvasProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const setCanvasSize = useCallback(() => {
+    containerRef.current!.style.width = `${props.reactImageEditor.canvasElement.width}px`;
+    containerRef.current!.style.height = `${props.reactImageEditor.canvasElement.height}px`;
+  }, []);
+
+  const insertCanvas = useCallback(() => {
+    setCanvasSize();
+    containerRef.current!.appendChild(props.reactImageEditor.canvasElement);
+  }, []);
+
+  useEffect(() => {
+    insertCanvas();
+  }, []);
+
   return (
     <ReactImageEditorCanvasContext.Provider value={props.reactImageEditor}>
-      <canvas id={ReactImageEditor.REACT_IMAGE_EDITOR__CANVAS_ID} />
+      <div
+        id={ReactImageEditor.REACT_IMAGE_EDITOR__CONTAINER_ID}
+        ref={containerRef}
+      ></div>
       {children}
     </ReactImageEditorCanvasContext.Provider>
   );
