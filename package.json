@@ -29,7 +29,10 @@
     "uuid": "^9.0.0"
   },
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs"
+    "build": "rollup -c --bundleConfigAsCjs",
+    "clear": "rm -rf ./dist",
+    "rebuild": "npm run clear && npm run build",
+    "example": "npm run rebuild && cd example && npm run build && npm run preview"
   },
   "repository": {
     "type": "git",
