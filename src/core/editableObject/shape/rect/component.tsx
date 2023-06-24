@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import { ReactImageEditorCanvasContext } from "../../../canvas/component";
 import { ShapeRect, RectParams } from "./rect";

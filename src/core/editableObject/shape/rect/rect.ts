@@ -1,7 +1,7 @@
 import { Object, Rect } from "fabric";
 import {v4 as uuid} from 'uuid';
 
-import { EditableObject as EditableObject, EditableObjectParams } from "../../editableObject";
+import { EditableObject, EditableObjectParams } from "../../editableObject";
 
 
 export interface RectParams extends EditableObjectParams {
