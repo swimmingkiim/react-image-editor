@@ -25,7 +25,9 @@ export const ReactImageEditorCanvas = ({
 
   const insertCanvas = useCallback(() => {
     setContainerSize();
-    containerRef.current!.appendChild(props.reactImageEditor.canvasElement);
+    containerRef.current!.appendChild(
+      props.reactImageEditor.fabricCanvas.wrapperEl
+    );
   }, []);
 
   useEffect(() => {
