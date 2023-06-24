@@ -7,6 +7,9 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript'
   ],
+  ignorePatterns: [
+    'example/**/*'
+  ],
   overrides: [
   ],
   parserOptions: {
