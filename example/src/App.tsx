@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import RIE from "react-image-editor";
 
 import "./App.css";
@@ -11,10 +9,6 @@ function App() {
       height: window.innerHeight,
     },
   });
-
-  useEffect(() => {
-    console.log(editor.data);
-  }, []);
 
   return (
     <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
