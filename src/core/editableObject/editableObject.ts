@@ -1,4 +1,4 @@
-import { Canvas, Object } from "fabric";
+import { Object } from "fabric";
 import { ReactImageEditor } from "../canvas/canvas";
 
 export interface EditableObjectRequiredParams {

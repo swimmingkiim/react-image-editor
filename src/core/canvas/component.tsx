@@ -18,13 +18,13 @@ export const ReactImageEditorCanvas = ({
 }: ReactImageEditorCanvasProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const setCanvasSize = useCallback(() => {
+  const setContainerSize = useCallback(() => {
     containerRef.current!.style.width = `${props.reactImageEditor.canvasElement.width}px`;
     containerRef.current!.style.height = `${props.reactImageEditor.canvasElement.height}px`;
   }, []);
 
   const insertCanvas = useCallback(() => {
-    setCanvasSize();
+    setContainerSize();
     containerRef.current!.appendChild(props.reactImageEditor.canvasElement);
   }, []);
 
