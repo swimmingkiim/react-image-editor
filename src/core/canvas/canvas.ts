@@ -7,7 +7,13 @@ export interface CanvasParams {
     };
 }
 
-export class ReactImageEditor implements CanvasParams {
+export interface CanvasMethods {
+    import(json: ReturnType<JSON["parse"]>): Promise<void>;
+    export(): ReturnType<JSON["parse"]>;
+    addObject(object: EditableObject): void;
+}
+
+export class ReactImageEditor implements CanvasParams, CanvasMethods {
 
     fabricCanvasOptions: {
         [key:string]: any;
@@ -35,6 +41,14 @@ export class ReactImageEditor implements CanvasParams {
 
     get canvasElement() {
         return this._canvasElement;
+    }
+
+    async import(json: any): Promise<void> {
+        await this.fabricCanvas.loadFromJSON(json);
+        this.fabricCanvas.renderAll();
+    }
+    export() {
+        return this.fabricCanvas.toJSON();
     }
 
     addObject(object: EditableObject) {
