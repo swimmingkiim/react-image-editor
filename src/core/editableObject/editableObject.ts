@@ -19,6 +19,15 @@ export interface EditableObjectProperties {
   moving: boolean;
 }
 
+export interface EditableObjectMethods {
+  init(): Object;
+  draw(): void;
+  select(): void;
+  move(): void; 
+  resize(): void;
+  rotate(): void;
+}
+
 export class EditableObject implements EditableObjectParams, EditableObjectProperties, EditableObjectMethods {
 
   editorController: ReactImageEditor;
@@ -61,13 +70,4 @@ export class EditableObject implements EditableObjectParams, EditableObjectPrope
   rotate(): void {
     throw new Error("Method not implemented.");
   }
-}
-
-export interface EditableObjectMethods {
-  init(): Object;
-  draw(): void;
-  select(): void;
-  move(): void; 
-  resize(): void;
-  rotate(): void;
 }
