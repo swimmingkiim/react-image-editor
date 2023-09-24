@@ -60,10 +60,30 @@ function App() {
     ],
   });
 
+  const handleAddRect = () => {
+    const newRect = new RIE.ShapeRect({
+      editorController: editor,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      width: 100 + Math.random() * 100,
+      height: 100 + Math.random() * 100,
+    });
+    editor.addObject(newRect);
+  }
+
   return (
+  <>
+    <button
+        onClick={handleAddRect}
+        style={{
+          position: 'fixed',
+          zIndex: 100,
+        }}
+      >add rect</button>
     <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
-      {/* <RIE.Rect x={100} y={100} width={300} height={300} /> */}
+      <RIE.Rect x={100} y={100} width={300} height={300}/>
     </RIE.ReactImageEditorCanvas>
+  </>
   );
 }
 

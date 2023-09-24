@@ -16,6 +16,7 @@ export interface TabProperties {
 export interface TabMethods {
   getCurrentData(): Data;
   getFabricJSON(): Data['snapshot'];
+  addHistory(newSnapshot: Data['snapshot']): void;
 }
 
 export class Tab implements TabProperties, TabMethods {
@@ -28,7 +29,7 @@ export class Tab implements TabProperties, TabMethods {
     this.id = uuid();
     this.name = params.name ?? 'tab';
     this.history = params.initialHistory;
-  } 
+  }
 
   static empty() {
     return new Tab({
@@ -42,5 +43,13 @@ export class Tab implements TabProperties, TabMethods {
 
   getFabricJSON(): Data['snapshot'] {
     return this.history.pointer.snapshot;
+  }
+
+  addHistory(newSnapshot: Data['snapshot']): void {
+    const newData = new Data({
+      snapshot: newSnapshot,
+      prevData: this.getCurrentData(),
+    })
+    this.history.push(newData);
   }
 }

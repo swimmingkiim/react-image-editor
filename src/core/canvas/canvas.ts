@@ -47,11 +47,10 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
         this._canvasElement = document.createElement('canvas');
         this._canvasElement.id = ReactImageEditor.REACT_IMAGE_EDITOR__CANVAS_ID;
         this._fabricCanvas = new Canvas(
-            this._canvasElement, 
+            this._canvasElement,
             params.fabricCanvasOptions,
         );
-        this.import(this.currentTab.getFabricJSON());
-    } 
+    }
 
     static REACT_IMAGE_EDITOR__CANVAS_ID = "__react-image-editor__canvas";
     static REACT_IMAGE_EDITOR__CONTAINER_ID = "__react-image-editor__container";
@@ -85,6 +84,9 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
     }
 
     addObject(object: EditableObject) {
-            this.fabricCanvas.add(object.fabricInstance);
+      this.fabricCanvas.add(object.fabricInstance);
+
+      const newSnapshot = this.fabricCanvas.toJSON();
+      this.currentTab.addHistory(newSnapshot);
     }
 }

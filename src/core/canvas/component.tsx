@@ -30,8 +30,16 @@ export const ReactImageEditorCanvas = ({
     );
   }, []);
 
+  const drawInitialObjects = useCallback(() => {
+    const isChildrenExist = React.Children.toArray(children).length > 0;
+    if (!isChildrenExist) {
+        props.reactImageEditor.import(props.reactImageEditor.currentTab.getFabricJSON());
+    }
+  }, []);
+
   useEffect(() => {
     insertCanvas();
+    drawInitialObjects();
   }, []);
 
   return (
