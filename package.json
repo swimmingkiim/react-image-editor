@@ -32,7 +32,8 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "clear": "rm -rf ./dist",
     "rebuild": "npm run clear && npm run build",
-    "example": "npm run rebuild && cd example && npm i && npm run build && npm run preview"
+    "example": "npm run rebuild && cd example && npm i && npm run build && npm run preview",
+    "lint": "npx eslint --fix"
   },
   "repository": {
     "type": "git",
