@@ -71,15 +71,32 @@ function App() {
     editor.addObject(newRect);
   }
 
+  const handleUndo = () => {
+    editor.undo();
+  }
+
+  const handleRedo = () => {
+    editor.redo();
+  }
+
   return (
   <>
-    <button
-        onClick={handleAddRect}
-        style={{
-          position: 'fixed',
-          zIndex: 100,
-        }}
-      >add rect</button>
+    <div
+      style={{
+        position: 'fixed',
+        zIndex: 100,
+      }}
+    >
+      <button
+          onClick={handleAddRect}
+        >add rect</button>
+      <button
+          onClick={handleUndo}
+        >undo</button>
+      <button
+          onClick={handleRedo}
+        >redo</button>
+    </div>
     <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
       <RIE.Rect x={100} y={100} width={300} height={300}/>
     </RIE.ReactImageEditorCanvas>
