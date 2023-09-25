@@ -27,6 +27,8 @@ export interface CanvasMethods {
     import(json: ReturnType<JSON["parse"]>): Promise<void>;
     export(): ReturnType<JSON["parse"]>;
     addObject(object: EditableObject): void;
+    undo(): void;
+    redo(): void;
 }
 
 export class ReactImageEditor implements CanvasProperties, CanvasMethods {
@@ -77,15 +79,7 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
     }
 
     addHistoryListener(): void {
-      this.fabricCanvas.on('object:modified', (_) => {
-        const newSnapshot = this.fabricCanvas.toJSON();
-        this.currentTab.addHistory(newSnapshot);
-      });
-      this.fabricCanvas.on('object:added', (_) => {
-        const newSnapshot = this.fabricCanvas.toJSON();
-        this.currentTab.addHistory(newSnapshot);
-      });
-      this.fabricCanvas.on('object:removed', (_) => {
+      this.fabricCanvas.on('object:modified', (options) => {
         const newSnapshot = this.fabricCanvas.toJSON();
         this.currentTab.addHistory(newSnapshot);
       });
@@ -101,5 +95,19 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
 
     addObject(object: EditableObject) {
       this.fabricCanvas.add(object.fabricInstance);
+      const newSnapshot = this.fabricCanvas.toJSON();
+      this.currentTab.addHistory(newSnapshot);
+    }
+
+    async undo(): Promise<void> {
+      this.currentTab.history.goPrev();
+      await this.fabricCanvas.loadFromJSON(this.currentTab.getFabricJSON());
+      this.fabricCanvas.renderAll();
+    }
+
+    async redo(): Promise<void> {
+      this.currentTab.history.goNext();
+      await this.fabricCanvas.loadFromJSON(this.currentTab.getFabricJSON());
+      this.fabricCanvas.renderAll();
     }
 }
