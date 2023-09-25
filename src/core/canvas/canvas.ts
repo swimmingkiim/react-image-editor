@@ -50,6 +50,7 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
             this._canvasElement,
             params.fabricCanvasOptions,
         );
+        this.addHistoryListener();
     }
 
     static REACT_IMAGE_EDITOR__CANVAS_ID = "__react-image-editor__canvas";
@@ -75,6 +76,21 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
         return currentTab;
     }
 
+    addHistoryListener(): void {
+      this.fabricCanvas.on('object:modified', (_) => {
+        const newSnapshot = this.fabricCanvas.toJSON();
+        this.currentTab.addHistory(newSnapshot);
+      });
+      this.fabricCanvas.on('object:added', (_) => {
+        const newSnapshot = this.fabricCanvas.toJSON();
+        this.currentTab.addHistory(newSnapshot);
+      });
+      this.fabricCanvas.on('object:removed', (_) => {
+        const newSnapshot = this.fabricCanvas.toJSON();
+        this.currentTab.addHistory(newSnapshot);
+      });
+    }
+
     async import(json: any): Promise<void> {
         await this.fabricCanvas.loadFromJSON(json);
         this.fabricCanvas.renderAll();
@@ -85,8 +101,5 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
 
     addObject(object: EditableObject) {
       this.fabricCanvas.add(object.fabricInstance);
-
-      const newSnapshot = this.fabricCanvas.toJSON();
-      this.currentTab.addHistory(newSnapshot);
     }
 }
