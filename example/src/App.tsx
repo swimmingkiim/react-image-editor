@@ -98,7 +98,9 @@ function App() {
         >redo</button>
     </div>
     <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
-      <RIE.Rect x={100} y={100} width={300} height={300}/>
+      <RIE.TabWrapper>
+        <RIE.Rect x={100} y={100} width={300} height={300}/>
+      </RIE.TabWrapper>
     </RIE.ReactImageEditorCanvas>
   </>
   );
