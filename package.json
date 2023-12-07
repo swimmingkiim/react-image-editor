@@ -7,6 +7,36 @@
   "author": "swimmingkiim <swimmingkiim@gmail.com>",
   "repository": "https://github.com/swimmingkiim/react-image-editor.git",
   "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "serve": "serve -s -c ./serve.json -l 3000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "lint": "eslint --config ./.eslintrc.json ./src",
+    "lint:fix": "eslint --fix --config ./.eslintrc.json ./src",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@tensorflow-models/deeplab": "^0.2.1",
@@ -40,36 +70,6 @@
     "rxjs": "^7.5.5",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "serve": "serve -s -c ./serve.json -l 3000",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "lint": "eslint --config ./.eslintrc.json ./src",
-    "lint:fix": "eslint --fix --config ./.eslintrc.json ./src",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@tensorflow/tfjs-backend-cpu": "^3.18.0",
