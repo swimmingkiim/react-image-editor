@@ -80,7 +80,7 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
   }
 
   _addHistoryListener(): void {
-    this.fabricCanvas.on('object:modified', (options) => {
+    this.fabricCanvas.on('object:modified', (_) => {
       const newSnapshot = this.fabricCanvas.toJSON();
       this.currentTab.addHistory(newSnapshot);
     });
