@@ -24,6 +24,7 @@ export interface CanvasProperties {
 }
 
 export interface CanvasMethods {
+  _addHistoryListener(): void;
   import(json: ReturnType<JSON["parse"]>): Promise<void>;
   export(): ReturnType<JSON["parse"]>;
   addObject(object: EditableObject): void;
@@ -52,7 +53,7 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
       this._canvasElement,
       params.fabricCanvasOptions,
     );
-    this.addHistoryListener();
+    this._addHistoryListener();
   }
 
   static REACT_IMAGE_EDITOR__CANVAS_ID = "__react-image-editor__canvas";
@@ -78,7 +79,7 @@ export class ReactImageEditor implements CanvasProperties, CanvasMethods {
     return currentTab;
   }
 
-  addHistoryListener(): void {
+  _addHistoryListener(): void {
     this.fabricCanvas.on('object:modified', (options) => {
       const newSnapshot = this.fabricCanvas.toJSON();
       this.currentTab.addHistory(newSnapshot);
