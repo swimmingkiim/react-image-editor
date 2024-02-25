@@ -17,7 +17,7 @@ export class ShapeRect extends EditableObject implements RectParams {
   y: number;
   width: number;
   height: number;
-  
+
   constructor(params: RectParams) {
     super(params);
 
@@ -39,7 +39,7 @@ export class ShapeRect extends EditableObject implements RectParams {
       height: this.height,
       fill: this.fillColor,
       stroke: this.strokeColor,
-    }); 
+    });
   }
 
   select(): void {

@@ -80,29 +80,29 @@ function App() {
   }
 
   return (
-  <>
-    <div
-      style={{
-        position: 'fixed',
-        zIndex: 100,
-      }}
-    >
-      <button
+    <>
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: 100,
+        }}
+      >
+        <button
           onClick={handleAddRect}
         >add rect</button>
-      <button
+        <button
           onClick={handleUndo}
         >undo</button>
-      <button
+        <button
           onClick={handleRedo}
         >redo</button>
-    </div>
-    <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
-      <RIE.TabWrapper>
-        <RIE.Rect x={100} y={100} width={300} height={300}/>
-      </RIE.TabWrapper>
-    </RIE.ReactImageEditorCanvas>
-  </>
+      </div>
+      <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
+        <RIE.TabWrapper>
+          <RIE.Rect x={100} y={100} width={300} height={300} />
+        </RIE.TabWrapper>
+      </RIE.ReactImageEditorCanvas>
+    </>
   );
 }
 
