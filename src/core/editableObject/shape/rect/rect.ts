@@ -32,7 +32,7 @@ export class ShapeRect extends EditableObject implements RectParams {
   }
 
   init(): Object {
-    return new Rect({
+   return new Rect({
       left: this.x,
       top: this.y,
       width: this.width,
