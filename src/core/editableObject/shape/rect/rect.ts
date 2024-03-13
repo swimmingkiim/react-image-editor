@@ -43,7 +43,7 @@ export class ShapeRect extends EditableObject implements RectParams {
   }
 
   select(): void {
-    this.editorController.fabricCanvas.setActiveObject(this.fabricInstance);
+    throw new Error("Method not implemented.");
   }
   move(): void {
     throw new Error("Method not implemented.");

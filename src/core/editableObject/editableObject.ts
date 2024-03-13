@@ -59,7 +59,7 @@ export class EditableObject implements EditableObjectParams, EditableObjectPrope
     throw new Error("Method not implemented.");
   }
   select(): void {
-    throw new Error("Method not implemented.");
+    this.editorController.fabricCanvas.setActiveObject(this.fabricInstance);
   }
   move(): void {
     throw new Error("Method not implemented.");
