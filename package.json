@@ -33,7 +33,7 @@
     "clear": "rm -rf ./dist",
     "rebuild": "npm run clear && npm run build",
     "example": "npm run rebuild && cd example && npm i && npm run build && npm run preview",
-    "lint": "npx eslint --fix"
+    "lint": "npx eslint --fix ./src/**/*.ts"
   },
   "repository": {
     "type": "git",

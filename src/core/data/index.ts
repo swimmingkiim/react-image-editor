@@ -1,7 +1,7 @@
-import * as Data from "./data";
+import * as Data from './data'
 
 const modules = {
-  ...Data,
-};
+  ...Data
+}
 
-export default modules;
+export default modules

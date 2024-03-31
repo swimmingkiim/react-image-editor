@@ -1,9 +1,9 @@
-import * as Tab from "./tab";
-import * as Component from "./component";
+import * as Tab from './tab'
+import * as Component from './component'
 
 const modules = {
   ...Tab,
-  ...Component,
-};
+  ...Component
+}
 
-export default modules;
+export default modules

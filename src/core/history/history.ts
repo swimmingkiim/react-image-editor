@@ -1,48 +1,48 @@
-import { Data } from '../data/data';
+import { Data } from '../data/data'
 
 export interface HistoryParams {
-  initialData: Data;
+  initialData: Data
 }
 
 export interface HistoryProperties {
-  pointer: Data;
+  pointer: Data
 }
 
 export interface HistoryMethods {
-  goPrev(): void;
-  goNext(): void;
-  push(data: Data): void;
+  goPrev: () => void
+  goNext: () => void
+  push: (data: Data) => void
 }
 
 export class History implements HistoryProperties, HistoryMethods {
+  pointer: Data
 
-  pointer: Data;
+  constructor (params: HistoryParams) {
+    this.pointer = params.initialData
+  }
 
-  constructor(params:HistoryParams) {
-    this.pointer = params.initialData;
-  } 
-
-  static empty(): History {
+  static empty (): History {
     return new History({
-      initialData: Data.empty(),
-    });
+      initialData: Data.empty()
+    })
   }
 
-  goPrev(): void {
-    const prevData = this.pointer.prevData;
+  goPrev (): void {
+    const prevData = this.pointer.prevData
     if (prevData) {
-      this.pointer = prevData;
-    }
-  }
-  goNext(): void {
-    const nextData = this.pointer.nextData;
-    if (nextData) {
-      this.pointer = nextData;
+      this.pointer = prevData
     }
   }
 
-  push(data: Data): void {
-    this.pointer.nextData = data;
-    this.pointer = this.pointer.nextData;
+  goNext (): void {
+    const nextData = this.pointer.nextData
+    if (nextData) {
+      this.pointer = nextData
+    }
+  }
+
+  push (data: Data): void {
+    this.pointer.nextData = data
+    this.pointer = this.pointer.nextData
   }
 }

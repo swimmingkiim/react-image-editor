@@ -1,7 +1,7 @@
-import * as History from "./history";
+import * as History from './history'
 
 const modules = {
-  ...History,
-};
+  ...History
+}
 
-export default modules;
+export default modules

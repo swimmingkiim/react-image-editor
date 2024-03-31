@@ -1,8 +1,7 @@
-import rectModules from './rect';
-
+import rectModules from './rect'
 
 const modules = {
-  ...rectModules,
-};
+  ...rectModules
+}
 
-export default modules;
+export default modules

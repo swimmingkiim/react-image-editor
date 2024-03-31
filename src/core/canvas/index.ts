@@ -1,9 +1,9 @@
-import * as Canvas from "./canvas";
-import * as Component from "./component";
+import * as Canvas from './canvas'
+import * as Component from './component'
 
 const modules = {
   ...Canvas,
-  ...Component,
-};
+  ...Component
+}
 
-export default modules;
+export default modules
