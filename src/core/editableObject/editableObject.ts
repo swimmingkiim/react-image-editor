@@ -1,4 +1,4 @@
-import { Object } from "fabric";
+import { Object as FabricObject } from "fabric";
 import { type ReactImageEditor } from "../canvas/canvas";
 
 export interface EditableObjectRequiredParams {
@@ -16,13 +16,13 @@ export interface EditableObjectParams
 
 export interface EditableObjectProperties {
   id: string;
-  fabricInstance: Object;
+  fabricInstance: FabricObject;
   selected: boolean;
   moving: boolean;
 }
 
 export interface EditableObjectMethods {
-  init: () => Object;
+  init: () => FabricObject;
   draw: () => void;
   select: () => void;
   move: () => void;
@@ -42,7 +42,7 @@ export class EditableObject
   strokeColor?: string;
 
   id: string;
-  fabricInstance: Object;
+  fabricInstance: FabricObject;
   selected: boolean;
   moving: boolean;
 
@@ -53,12 +53,12 @@ export class EditableObject
     this.fillColor = params.fillColor ?? "#000000";
     this.strokeColor = params.strokeColor ?? "#000000";
 
-    this.fabricInstance = new Object();
+    this.fabricInstance = new FabricObject();
     this.selected = false;
     this.moving = false;
   }
 
-  init(): Object {
+  init(): FabricObject {
     throw new Error("Method not implemented.");
   }
 
