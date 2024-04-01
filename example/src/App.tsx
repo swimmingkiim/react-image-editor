@@ -70,39 +70,31 @@ function App() {
       height: 100 + Math.random() * 100,
     });
     editor.addObject(newRect);
-  }
+  };
 
   const handleUndo = () => {
     editor.undo();
-  }
+  };
 
   const handleRedo = () => {
     editor.redo();
-  }
+  };
 
   return (
     <>
       <div
         style={{
-          position: 'fixed',
+          position: "fixed",
           zIndex: 100,
         }}
       >
-        <button
-          onClick={handleAddRect}
-        >add rect</button>
-        <button
-          onClick={handleUndo}
-        >undo</button>
-        <button
-          onClick={handleRedo}
-        >redo</button>
+        <button onClick={handleAddRect}>add rect</button>
+        <button onClick={handleUndo}>undo</button>
+        <button onClick={handleRedo}>redo</button>
       </div>
-      <RIE.ReactImageEditorCanvas reactImageEditor={editor}>
-        <RIE.TabWrapper>
-          <RIE.Rect x={100} y={100} width={300} height={300} />
-        </RIE.TabWrapper>
-      </RIE.ReactImageEditorCanvas>
+      <RIE.ReactImageEditorCanvas
+        reactImageEditor={editor}
+      ></RIE.ReactImageEditorCanvas>
     </>
   );
 }
