@@ -1,9 +1,9 @@
-import * as EditableObject from './editableObject'
-import shapeModules from './shape'
+import * as EditableObject from "./editableObject";
+import shapeModules from "./shape";
 
 const modules = {
   ...EditableObject,
-  ...shapeModules
-}
+  ...shapeModules,
+};
 
-export default modules
+export default modules;
