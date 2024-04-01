@@ -1,4 +1,4 @@
-import { type Object, Rect } from "fabric";
+import { type Object as FabricObject, Rect } from "fabric";
 import { v4 as uuid } from "uuid";
 
 import {
@@ -32,7 +32,7 @@ export class ShapeRect extends EditableObject implements RectParams {
     this.fabricInstance = this.init();
   }
 
-  init(): Object {
+  init(): FabricObject {
     return new Rect({
       left: this.x,
       top: this.y,
