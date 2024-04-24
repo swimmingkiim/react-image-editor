@@ -38,19 +38,31 @@ const View: React.FC<ViewProps> = ({
     stageRef.current.batchDraw();
   }, [stageRef]);
 
-  const zoomOnWheel = useCallback((e: KonvaEventObject<WheelEvent>) => {
+  const handleWheel = useCallback((e: KonvaEventObject<WheelEvent>) => {
     e.evt.preventDefault();
     const stage = stageRef.current;
     if (!stage) {
       return;
     }
-    const zoomDirection = e.evt.deltaY > 0 ? 1 : -1;
+
+    const zoomDirection = e.evt.deltaY > 0 ? -1 : 1;
     const scaleBy = 1.1;
     const oldScale = stage.scaleX();
 
     const pointer = stage.getPointerPosition();
 
     if (!pointer) {
+      return;
+    }
+
+    // if wheel with ctrl, zoom it. if not, natural scroll the stage
+    if (!e.evt.ctrlKey) {
+      const newPos = {
+        x: decimalUpToSeven(stage.x() - e.evt.deltaX),
+        y: decimalUpToSeven(stage.y() - e.evt.deltaY),
+      };
+      stage.position(newPos);
+      setValue(STAGE_POSITION, newPos);
       return;
     }
 
@@ -252,7 +264,7 @@ const View: React.FC<ViewProps> = ({
           width={window.innerWidth * 0.8}
           height={window.innerHeight * 0.8}
           draggable={false}
-          onWheel={zoomOnWheel}
+          onWheel={handleWheel}
           onMouseDown={onMouseDownOnStage}
           onMouseMove={onMouseMoveOnStage}
           onMouseUp={onMouseUpOnStage}
