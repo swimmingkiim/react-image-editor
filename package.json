@@ -1,22 +1,26 @@
 {
   "name": "react-image-editor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React + Konva / image editor / like Figma or Canva",
   "homepage": "https://swimmingkiim.github.io/react-image-editor",
   "bugs": "https://github.com/swimmingkiim/react-image-editor/issues",
   "author": "swimmingkiim <swimmingkiim@gmail.com>",
   "repository": "https://github.com/swimmingkiim/react-image-editor.git",
   "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@tensorflow-models/deeplab": "^0.2.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.2",
     "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "gh-pages": "^6.1.1",
@@ -41,37 +45,12 @@
     "typescript": "^4.7.4",
     "web-vitals": "^3.5.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "serve": "serve -s -c ./serve.json -l 3000",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "lint": "eslint --config ./.eslintrc.json ./src",
-    "lint:fix": "eslint --fix --config ./.eslintrc.json ./src",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "typescript": "^4.7.4",
     "@tensorflow/tfjs-backend-cpu": "^3.18.0",
     "@tensorflow/tfjs-backend-webgl": "^3.18.0",
     "@tensorflow/tfjs-converter": "^3.18.0",
@@ -92,6 +71,7 @@
     "normalizr": "^3.6.2",
     "npm": "^10.5.2",
     "prettier": "^3.2.5",
-    "reselect": "^5.1.0"
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
   }
 }

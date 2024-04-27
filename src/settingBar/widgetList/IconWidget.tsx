@@ -27,11 +27,18 @@ const IconWidget: React.FC = () => {
     <Col className={[sizeStyles["mx-h-30vh"]].join(" ")}>
       <Form>
         <Form.Group className="mb-3" controlId="iconKeyword">
-          <Form.Label>{getTranslation("widget", "icon", "search", "title")}</Form.Label>
+          <Form.Label>
+            {getTranslation("widget", "icon", "search", "title")}
+          </Form.Label>
           <Form.Control
             onChange={changeKeyword}
             type="text"
-            placeholder={getTranslation("widget", "icon", "search", "placeholder")}
+            placeholder={getTranslation(
+              "widget",
+              "icon",
+              "search",
+              "placeholder"
+            )}
           />
           <Form.Text className="text-muted">
             {getTranslation("widget", "icon", "search", "desc")}
@@ -62,16 +69,20 @@ const IconThumbnail: React.FC<{
   maxPx: number;
   data: Omit<IconItemKind, "image">;
 }> = ({ data: { id, ...data }, maxPx }) => (
-  <Figure as={Col} className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}>
+  <Figure
+    as={Col}
+    className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}
+  >
     <Drag
       dragType="copyMove"
       dragSrc={{
         trigger: TRIGGER.INSERT.ICON,
         ...data,
-      }}>
+      }}
+    >
       <Figure.Image
         alt={data.icon}
-        src={`${process.env.PUBLIC_URL}/assets/icon/bootstrap/${data.icon}`}
+        src={`/assets/icon/bootstrap/${data.icon}`}
       />
     </Drag>
     {/* <Figure.Caption

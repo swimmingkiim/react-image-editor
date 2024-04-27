@@ -51,9 +51,11 @@ const ImageWidget: React.FC = () => {
     file.onchange = (e) => {
       const event = e;
       if (event.target && (event.target as HTMLInputElement).files) {
-        Object.values((event.target as HTMLInputElement).files!).forEach((file) => {
-          fileReader.readAsDataURL(file);
-        });
+        Object.values((event.target as HTMLInputElement).files!).forEach(
+          (file) => {
+            fileReader.readAsDataURL(file);
+          }
+        );
       }
     };
     file.click();
@@ -74,7 +76,8 @@ const ImageWidget: React.FC = () => {
               spaceStyles.ml1rem,
               alignStyles["text-left"],
             ].join(" ")}
-            onClick={uploadImage}>
+            onClick={uploadImage}
+          >
             <i className="bi-plus" />
           </Button>
         </h6>
@@ -105,7 +108,10 @@ const ImageThumbnail: React.FC<{
 }> = ({ data: { id, ...data }, maxPx }) => {
   const { getImageAssetSrc } = useImageAsset();
   return (
-    <Figure as={Col} className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}>
+    <Figure
+      as={Col}
+      className={[alignStyles.absoluteCenter, alignStyles.wrapTrue].join(" ")}
+    >
       <Drag
         dragType="copyMove"
         dragSrc={{
@@ -113,19 +119,25 @@ const ImageThumbnail: React.FC<{
           "data-item-type": data["data-item-type"],
           src: data.src.startsWith("data:")
             ? data.src
-            : `${process.env.PUBLIC_URL}/assets/image/${data.src}`,
-        }}>
+            : `/assets/image/${data.src}`,
+        }}
+      >
         <Figure.Image
           alt={data.name}
           src={
             data.src.startsWith("data:")
               ? data.src
-              : `${process.env.PUBLIC_URL}/assets/image/${data.src}`
+              : `/assets/image/${data.src}`
           }
         />
       </Drag>
       <Figure.Caption
-        className={[fontStyles.font075em, sizeStyles.width100, "text-center"].join(" ")}>
+        className={[
+          fontStyles.font075em,
+          sizeStyles.width100,
+          "text-center",
+        ].join(" ")}
+      >
         {data.name}
       </Figure.Caption>
     </Figure>

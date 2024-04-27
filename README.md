@@ -6,16 +6,14 @@
 
 ```bash
 npm i
-npm start
+npm run dev
 ```
 
 ## How to Serve
 
 ```bash
-npm i -g serve
-npm i
 npm run build
-npm run serve
+npm run preview
 ```
 
 ## Features
@@ -73,6 +71,6 @@ npm run serve
     - text align
     - remove text
 
-
 # Support Me!
+
 <a href="https://www.buymeacoffee.com/swimmingkiim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
