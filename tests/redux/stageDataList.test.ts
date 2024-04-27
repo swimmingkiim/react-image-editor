@@ -5,7 +5,7 @@ import { EntityState } from "@reduxjs/toolkit";
 import reducer, {
   StageDataListItem,
   stageDataListAction,
-} from "../../src/redux/StageDataList";
+} from "../../src/redux/stageDataList";
 import { initialStageDataList } from "../../src/redux/initilaStageDataList";
 
 const testItem = {

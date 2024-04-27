@@ -15,7 +15,7 @@ import View from "./view";
 import Frame, { FrameProps } from "./view/frame";
 import { StageData } from "./redux/currentStageData";
 import useItem from "./hook/useItem";
-import { StageDataListItem } from "./redux/StageDataList";
+import { StageDataListItem } from "./redux/stageDataList";
 import useStageDataList from "./hook/useStageDataList";
 import ImageItem, { ImageItemProps } from "./view/object/image";
 import useSelection from "./hook/useSelection";

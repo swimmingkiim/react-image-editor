@@ -2,7 +2,7 @@ import { configureStore, EntityState, getDefaultMiddleware } from "@reduxjs/tool
 import { combineEpics, createEpicMiddleware } from "redux-observable";
 import fileMetaReducer, { FileMeta } from "./fileMeta";
 import stageDataReducer, { StageData, stageDataEpic } from "./currentStageData";
-import stageDataListReducer, { StageDataListItem } from "./StageDataList";
+import stageDataListReducer, { StageDataListItem } from "./stageDataList";
 import imageAssetListReducer, { ImageAssetListItem } from "./imageAssetList";
 
 export type StoreState = {

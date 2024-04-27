@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StageDataListItem } from "../redux/StageDataList";
+import { StageDataListItem } from "../redux/stageDataList";
 import { TabKind } from "../tab/Tab";
 import useLocalStorage from "./useLocalStorage";
 import useSelection from "./useSelection";
