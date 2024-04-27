@@ -45,7 +45,7 @@ export const stageDataListSlice = createSlice({
         stageDataListEntity.removeMany(state, action.payload);
         return;
       }
-      stageDataListEntity.removeOne(state, action.payload);
+      stageDataListEntity.removeOne(state, action.payload.id);
     },
   },
 });
