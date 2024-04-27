@@ -54,7 +54,7 @@ export const stageDataSlice = createSlice({
         stageDataEntity.removeMany(state, action.payload);
         return;
       }
-      stageDataEntity.removeOne(state, action.payload);
+      stageDataEntity.removeOne(state, action.payload.id);
     },
     clearItems(state, action) {
       stageDataEntity.removeAll(state);
