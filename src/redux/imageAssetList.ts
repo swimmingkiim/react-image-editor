@@ -46,7 +46,7 @@ export const imageAssetListSlice = createSlice({
         imageAssetListEntity.removeMany(state, action.payload);
         return;
       }
-      imageAssetListEntity.removeOne(state, action.payload);
+      imageAssetListEntity.removeOne(state, action.payload.id);
     },
   },
 });
