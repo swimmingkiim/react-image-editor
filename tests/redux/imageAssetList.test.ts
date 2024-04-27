@@ -4,7 +4,7 @@ import reducer, {
   ImageAssetListItem,
   imageAssetListAction,
 } from "../../src/redux/imageAssetList";
-import { Dictionary, EntityState } from "@reduxjs/toolkit";
+import { EntityState } from "@reduxjs/toolkit";
 
 describe("Test Redux - ImageAssetList", () => {
   test("should return EntityState<ImageAssetList> instance", () => {
