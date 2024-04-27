@@ -7,13 +7,13 @@ import reducer, {
 import { Dictionary, EntityState } from "@reduxjs/toolkit";
 
 describe("Test Redux - ImageAssetList", () => {
-  test("should return ImageAssetList[] instance", () => {
-    assertType<Dictionary<ImageAssetListItem>>(
-      reducer(undefined, { type: "unknown" }).entities
+  test("should return EntityState<ImageAssetList> instance", () => {
+    assertType<EntityState<ImageAssetListItem>>(
+      reducer(undefined, { type: "unknown" })
     );
   });
 
-  test("should return initial ImageAssetList instance", () => {
+  test("should return initial Entity<ImageAssetList> instance", () => {
     const targetInitialImageAssetList: EntityState<ImageAssetListItem> = {
       entities: {},
       ids: [],
