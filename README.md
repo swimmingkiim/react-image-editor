@@ -71,6 +71,14 @@ npm run preview
     - text align
     - remove text
 
+If react-image-editor doesn't cover your needs I recommend taking a look at [Pintura](https://pqina.nl/pintura/?ref=react-image-editor)
+
+Pintura features cropping, rotating, flipping, filtering, annotating, and lots of additional functionality to cover all your image and video editing needs on both mobile and desktop devices.
+
+[<img src="https://github.com/swimmingkiim/react-image-editor/blob/main/screenshots/pintura-animation.gif?raw=true" width="600" alt=""/>](https://pqina.nl/pintura/react-image-editor/?ref=react-image-editor)
+
+[Learn more about Pintura Image Editor](https://pqina.nl/pintura/react-image-editor/?ref=react-image-editor)
+
 # Support Me!
 
 <a href="https://www.buymeacoffee.com/swimmingkiim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
