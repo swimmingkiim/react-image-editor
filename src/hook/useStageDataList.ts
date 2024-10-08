@@ -25,10 +25,18 @@ const useStageDataList = () => {
 
   const initializeFileDataList = (dataList: StageDataListItem[]) => {
     dispatch(stageDataListAction.initialize(dataList));
-    const lastFile = dataList[dataList.length - 1] ?? null;
-    if (lastFile) {
-      changeStageData(lastFile.id, lastFile.id, lastFile.data);
+    // const lastFile = dataList[dataList.length - 1] ?? null;
+    // if (lastFile) {
+    //   changeStageData(lastFile.id, lastFile.id, lastFile.data);
+    // }
+    const firstFile = dataList[0] ?? null;
+    if (firstFile) {
+      changeStageData(firstFile.id, firstFile.id, firstFile.data);
     }
+  };
+
+  const initializeNavBarList = (dataList: StageDataListItem[]) => {
+    
   };
 
   const createFileData = (newFile: StageDataListItem) => {

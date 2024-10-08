@@ -23,7 +23,7 @@ export type TextItemProps = OverrideItemProps<{
   e?: DragEvent;
 }>;
 
-const TextItem: React.FC<TextItemProps> = ({ data, e, transformer, onSelect }) => {
+const TextItem: React.FC<TextItemProps> = ({ data, e, transformer, onSelect, referenceRect }) => {
   const { attrs } = data;
 
   const textRef = useRef() as RefObject<Konva.Text>;
@@ -226,8 +226,8 @@ const TextItem: React.FC<TextItemProps> = ({ data, e, transformer, onSelect }) =
       data-item-type="text"
       data-frame-type="text"
       id={data.id}
-      x={attrs.x}
-      y={attrs.y}
+      x={referenceRect ? referenceRect.x + (referenceRect.width - attrs.width)/2 : attrs.x}
+      y={referenceRect ? referenceRect.y + (referenceRect.height - attrs.height)/2 : attrs.y}
       align={attrs.align ?? "center"}
       verticalAlign={attrs.verticalAlign ?? "middel"}
       width={attrs.width}

@@ -1,0 +1,91 @@
+
+.color-picker-root {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #2E314E;
+    box-sizing: border-box;
+    font-weight: 300;
+    color: #DDD;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.color-picker-root .color-picker-header {
+    padding: .6rem;
+    height: 2rem;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+}
+
+.color-picker-root .color-picker-header .color-picker-title {
+    margin: auto .6rem;
+    font-size: 0.8667rem;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    align-items: center;
+    display: block;
+    margin-block: auto .6rem;
+    width: 90%;
+    height: 4rem;
+}
+
+.color-picker-root .color-picker-header .color-picker-close{
+    justify-content: end;   
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+    padding: .5rem;
+}
+
+.color-picker-root .color-picker-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: .6rem;
+    margin: 0 auto;
+}
+
+.color-picker-root .color-picker-body .size-availability {
+    width: 100%;
+    background-color: #353535;
+    color: #7D7D7D;
+    padding: .5rem 0 .5rem 0;
+    margin: .5rem 0 2rem 0;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: center !important;
+    display: flex;
+}
+
+.color-picker-root .color-picker-body .size-availability div {
+    border-right: 1px solid #7D7D7D;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.color-picker-root .color-picker-body .size-availability div:last-of-type {
+    border-right: none;
+}
+
+.color-picker-root .color-picker-body h2 {
+    border-bottom: 2px solid #333;
+    margin: 0;
+    padding: 0 0 1rem .4rem;
+    font-size: 0.8667rem;
+    font-weight: bold;
+    opacity: .6;
+}
+
+.color-picker-root .color-picker-body .color-item-container {
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
+
+.color-picker-root .color-picker-body .color-item-container .row {
+    margin: auto;
+}
+
+.color-picker-root .color-picker-body .color-item-container:hover {
+    border: 1px solid #fff;
+}
+

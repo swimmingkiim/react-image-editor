@@ -1,0 +1,42 @@
+.font-selector{
+    flex-direction: row;
+    position: relative;
+    display: flex;
+}
+
+.font-selector:hover{
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.font-selector .btn {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: calc(100% - 2px);
+    aspect-ratio: 1/1;
+    border-radius: 1px;
+}
+
+.font-size-btn-group {
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+}
+
+.font-size-btn-group .btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1px;
+}

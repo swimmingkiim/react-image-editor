@@ -4,12 +4,16 @@ import fileMetaReducer, { FileMeta } from "./fileMeta";
 import stageDataReducer, { StageData, stageDataEpic } from "./currentStageData";
 import stageDataListReducer, { StageDataListItem } from "./stageDataList";
 import imageAssetListReducer, { ImageAssetListItem } from "./imageAssetList";
+import workspaceColorReducer, { WorkspaceColorState } from "./workspaceColor";
+import pageInfoReducer, { PageInfo } from "./pageInfo";
 
 export type StoreState = {
   fileMeta: FileMeta;
   currentStageData: EntityState<StageData["attrs"]>;
   stageDataList: EntityState<StageDataListItem>;
   imageAssetList: EntityState<ImageAssetListItem>;
+  workspaceColor: EntityState<WorkspaceColorState>;
+  pageInfoCollection: EntityState<PageInfo>;
 };
 
 const epicMiddleware = createEpicMiddleware();
@@ -23,6 +27,8 @@ const configureKonvaEditorStore = (preloadedState?: StoreState) => {
       currentStageData: stageDataReducer,
       stageDataList: stageDataListReducer,
       imageAssetList: imageAssetListReducer,
+      workspaceColor: workspaceColorReducer,
+      pageInfoCollection: pageInfoReducer,
     },
     middleware: getDefaultMiddleware({ serializableCheck: false }).concat(epicMiddleware),
     preloadedState,

@@ -5,6 +5,20 @@
   align-items: center;
 }
 
+.fromStartCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fromStartCenter-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .fromStartBottom {
   display: flex;
   flex-direction: row;
@@ -16,7 +30,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .fromBottomCenter {
@@ -24,6 +37,11 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.text-center-middle {
+  text-align: center !important;
+  margin: auto !important;
 }
 
 .text-center {
@@ -45,3 +63,9 @@
 .wrapFalse {
   flex-wrap: nowrap;
 }
+
+.navbar-buttongroup-spacing-10 {
+  margin-top: 10px;
+}
+
+/* <div style="height:100vh"><iframe width="100%" height="100%" src="http://localhost:5173" title="Image Editor"></iframe></div> */

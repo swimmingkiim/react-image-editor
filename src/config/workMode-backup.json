@@ -1,0 +1,72 @@
+[
+    {
+      "id": "select-all",
+      "name": "Select All",
+      "desc": "Select All Items",
+      "type": "tools",
+      "icon": "bounding-box"
+    },
+    {
+      "id": "remove-background",
+      "name": "Remove Background of Selected Image",
+      "desc": "Remove Background of Selected Image",
+      "type": "tools",
+      "icon": "card-image"
+    },
+    {
+      "id": "flip-horizontally",
+      "name": "Flip Horizontally",
+      "desc": "Flip Horizontally",
+      "type": "tools",
+      "icon": "arrow-left-right"
+    },
+    {
+      "id": "flip-vertically",
+      "name": "Flip Vertically",
+      "desc": "Flip Vertically",
+      "type": "tools",
+      "icon": "arrow-down-up"
+    },
+    {
+      "id": "reset-zoom",
+      "name": "Reset Zoom",
+      "desc": "Reset Zoom",
+      "type": "tools",
+      "icon": "arrows-fullscreen"
+    },
+    {
+      "id": "zoom-in",
+      "name": "Zoom In",
+      "desc": "Zoom In",
+      "type": "tools",
+      "icon": "arrows-angle-expand"
+    },
+    {
+      "id": "zoom-out",
+      "name": "Zoom Out",
+      "desc": "Zoom Out",
+      "type": "tools",
+      "icon": "arrows-angle-contract"
+    },
+    {
+      "id": "layer-up",
+      "name": "Layer Up",
+      "desc": "Layer Up",
+      "type": "tools",
+      "icon": "front"
+    },
+    {
+      "id": "layer-down",
+      "name": "Layer Down",
+      "desc": "Layer Down",
+      "type": "tools",
+      "icon": "back"
+    },
+    {
+      "id": "hotkey",
+      "name": "Shortcut",
+      "desc": "Keyboard Shortcut",
+      "type": "tools",
+      "icon": "keyboard-fill"
+    }
+  ]

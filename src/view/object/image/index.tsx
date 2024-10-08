@@ -7,6 +7,8 @@ import { OverrideItemProps } from "../../../hook/useItem";
 import useStage from "../../../hook/useStage";
 import { StageData } from "../../../redux/currentStageData";
 import { decimalUpToSeven } from "../../../util/decimalUpToSeven";
+import { emitColor } from "../../../util/colorPicker";
+import { EventName } from "../../../config/constants";
 
 export type ImageItemKind = {
   "data-item-type": string;
@@ -26,7 +28,7 @@ export const filterMap: { [name: string]: Filter } = {
   Grayscale: Konva.Filters.Grayscale,
 };
 
-const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
+const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect, referenceRect }) => {
   const { attrs } = data;
   const imageRef = useRef() as RefObject<Konva.Image>;
   const [imageSrc, setImageSrc] = useState<CanvasImageSource>(new Image());
@@ -55,13 +57,18 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
     if (!data.attrs._filters) {
       return [Konva.Filters.Brighten];
     }
-    return data.attrs._filters.map((filterName: string) => filterMap[filterName]);
+    return data.attrs._filters.map(
+      (filterName: string) => filterMap[filterName],
+    );
   }, [data.attrs]);
 
   useEffect(() => {
     const newImage = new Image();
     newImage.onload = () => {
       setImageSrc(newImage);
+      if(attrs.default){// TODO: check if this is the correct way to handle this
+        emitColor(EventName.PRODUCT_PREVIEW_LOADED_EVENT,newImage);
+      }
     };
     newImage.crossOrigin = "Anonymous";
     let source;
@@ -76,10 +83,14 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
         let height;
         if (imageNode.width() > imageNode.height()) {
           width = decimalUpToSeven(512);
-          height = decimalUpToSeven(width * (imageNode.height() / imageNode.width()));
+          height = decimalUpToSeven(
+            width * (imageNode.height() / imageNode.width()),
+          );
         } else {
           height = decimalUpToSeven(512);
-          width = decimalUpToSeven(height * (imageNode.width() / imageNode.height()));
+          width = decimalUpToSeven(
+            height * (imageNode.width() / imageNode.height()),
+          );
         }
         imageNode.width(width);
         imageNode.height(height);
@@ -114,13 +125,13 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
     <KonvaImage
       ref={imageRef}
       image={imageSrc}
-      onClick={onSelect}
+      onClick={attrs.draggable && onSelect}
       name="label-target"
       data-item-type="image"
       data-frame-type="image"
       id={data.id}
-      x={attrs.x}
-      y={attrs.y}
+      x={referenceRect ? referenceRect.x + (referenceRect.width - attrs.width)/2 : attrs.x}
+      y={referenceRect ? referenceRect.y + (referenceRect.height - attrs.height)/2 : attrs.y}
       width={attrs.width}
       height={attrs.height}
       scaleX={attrs.scaleX}
@@ -129,7 +140,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ data, e, onSelect }) => {
       opacity={attrs.opacity ?? 1}
       rotation={attrs.rotation ?? 0}
       filters={filters ?? [Konva.Filters.Brighten]}
-      draggable
+      draggable={attrs.draggable}
       onDragMove={onDragMoveFrame}
       onDragEnd={onDragEndFrame}
     />

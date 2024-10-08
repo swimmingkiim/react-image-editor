@@ -4,4 +4,26 @@
   --color-light: #e4ddcb;
   --color-grey: #e3e6e8;
   --color-contrast: #608d85;
+  font-family: "Roboto", sans-serif;
+}
+
+.font-theme {
+  --bs-bg-opacity: 0 !important;
+}
+
+.setting-bar {
+  background-color: #2E314E !important;
+  color: #DDD !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+  z-index: 2;
+}
+
+.setting-sidbar {
+  background-color: #2E314E !important;
+  color: #DDD !important;
+}
+
+.navbar-parts {
+  background-color: #2E314E !important;
+  color: #DDD !important;
 }

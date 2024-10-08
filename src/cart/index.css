@@ -1,0 +1,90 @@
+@import "../style/theme.module.css";
+@import "../style/border.module.css";
+
+.cart-view {
+  background-color: #2E314E !important;
+  color: #DDD !important;
+  position: absolute;
+  right: 30px;
+  bottom: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.cart-view section {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: .5rem;
+  height: 100%;
+  gap: .5rem;
+  border-right: 1px solid #494949;
+  box-sizing: border-box;
+}
+
+.color-section {
+  padding: .5rem;
+  border-right: 1px solid #494949;
+  box-sizing: border-box;
+  height: 100%;
+  margin: auto;
+  justify-content: start;
+}
+
+.color-section div{
+  width: 1rem;
+  height: 1rem;
+}
+
+.products-selector {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  height: 100%;
+  gap: .5rem;
+  border-right: 1px solid #494949;
+  box-sizing: border-box;
+}
+
+.products-selector .i-cloth {
+  justify-content: flex-start;
+}
+
+.products-selector label {
+  max-width: 21rem;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.products-selecor .i-arrow {
+  justify-content: flex-end;
+  width: .5rem;
+  padding: 0 .5rem 0 .5rem;
+}
+
+.checkout-section {
+  background-color: #00A3FF;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  height: 100%;
+  gap: .5rem;
+  box-sizing: border-box;
+  margin: auto;
+  cursor: pointer;
+}
+
+.checkout-section label{
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  padding: 0 .25rem 0 .5rem;
+}

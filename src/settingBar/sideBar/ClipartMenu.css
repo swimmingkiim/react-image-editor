@@ -1,0 +1,23 @@
+
+.clipart-form {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    border: 2px solid #ccc;
+    padding: 0.4rem;
+}
+
+.clipart-input {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    flex: 1;
+    font: inherit;
+    font-size: 0.8rem;
+    height: 100%;
+    outline: none;
+    padding: 0 0 0 8px;
+    width: 80%
+}

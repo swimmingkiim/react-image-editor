@@ -16,14 +16,16 @@ const Header: React.FC<HeaderProps> = ({ children }) => (
       alignStyles.fromStartBottom,
       sizeStyles.height100,
       "p-0",
-    ].join(" ")}>
+    ].join(" ")}
+  >
     <Col
       xs="auto"
-      className={[sizeStyles.widthLogo, sizeStyles.height100, alignStyles.absoluteCenter].join(
-        " ",
-      )}>
-      <Logo />
-    </Col>
+      className={[
+        sizeStyles.widthLogo,
+        sizeStyles.height100,
+        alignStyles.absoluteCenter,
+      ].join(" ")}
+    ></Col>
     <Col>{children}</Col>
   </header>
 );

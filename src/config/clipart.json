@@ -1,0 +1,18 @@
+[
+    {
+        "id":"emojis",
+        "name":"Emojis"
+    },
+    {
+        "id":"shapes",
+        "name":"Shapes & Symbols"
+    },
+    {
+        "id":"sports",
+        "name":"Sports & Games"
+    },
+    {
+        "id":"letters",
+        "name":"Letters & Numbers"
+    }
+]

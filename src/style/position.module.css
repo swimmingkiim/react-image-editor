@@ -6,6 +6,88 @@
   position: absolute;
 }
 
+.navbar {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+
+.foot-nav-item-close {
+  position: absolute;
+  top: 0.2rem;
+  left: 3.3rem;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.custom-offcanvas {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  height: 100%;
+  width: 100px; /* Adjust the width as needed */
+  max-width: 100%;
+  z-index: 1000 !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toolbar-section-container {
+  margin: 18px 0;
+  text-align: center;
+  color: #ddd;
+}
+
+.toolbar-section-container-button:hover {
+  cursor: pointer;
+}
+
+/* Remove background color for dropdown toggle */
+.toolbar-section-dropdown-toggle {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* Remove the caret */
+.toolbar-section-dropdown-toggle::after {
+  display: none;
+}
+
+/* Optional: Adjust styles for dropdown items if needed */
+.toolbar-section-dropdown-menu {
+  background-color: transparent;
+  border: none;
+}
+
+.toolbar-section-section-text {
+  margin: 18px 0;
+  text-align: center;
+  color: #9d9d9d;
+}
+
+.toolbar-section-stack {
+  margin-left: 15px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+
+.toolbar-section-stack-h6 {
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.toolbar-section-h6 {
+  margin-left: 15px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.toolbar-upload-photo-dropzone {
+  margin-bottom: 5px;
+}
+
 .top0 {
   top: 0;
 }

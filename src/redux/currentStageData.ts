@@ -8,9 +8,13 @@ export const STAGE_PREFIX = "STAGE";
 
 export type StageData = {
   id: string;
+  isDefault?: boolean;
   attrs: OverrideItemData<any>;
   className: string;
   children?: StageData[];
+  prev?: StageData;
+  next?: StageData;
+  refRect?: {x: number, y: number, width: number, height: number};
 };
 
 export const stageDataEpic: Epic = (action$, state$) =>

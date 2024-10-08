@@ -11,6 +11,13 @@ const useWorkHistory = (
   const { alterItems } = useItem();
   const [current, setCurrent] = useState<StageData[] | null>(null);
 
+  const getCurrentDefaultBackground = () => {
+    if (current && current.length > 0) {
+      return current[0];
+    }
+    return null;
+  };
+
   const goToPast = useCallback(() => {
     if (past.length > 0 && current) {
       const newFuture = [...current];
@@ -62,6 +69,7 @@ const useWorkHistory = (
     recordPast,
     clearHistory,
     setCurrent,
+    getCurrentDefaultBackground,
     current,
   };
 };

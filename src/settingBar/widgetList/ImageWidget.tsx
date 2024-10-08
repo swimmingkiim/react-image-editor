@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Button, Col, Figure, Row } from "react-bootstrap";
 import { nanoid } from "nanoid";
 import presetImageList from "../../config/image.json";
@@ -10,40 +10,72 @@ import spaceStyles from "../../style/space.module.css";
 import displayStyles from "../../style/display.module.css";
 import alignStyles from "../../style/align.module.css";
 import fontStyles from "../../style/font.module.css";
+import positionStyles from "../../style/position.module.css";
 import Drag from "../../util/Drag";
 import TRIGGER from "../../config/trigger";
 import useImageAsset from "../../hook/useImageAsset";
 import useI18n from "../../hook/usei18n";
+import { DropEvent, FileRejection, useDropzone } from "react-dropzone";
+import "react-dropzone/examples/theme.css";
+import { StageData } from "../../redux/currentStageData";
 
 export const IMAGE_LIST_KEY = "importedImage";
 
-const ImageWidget: React.FC = () => {
-  const { setImageAsset, getAllImageAsset } = useImageAsset();
+export type ImageWidgetProps = {
+  onCompleted?: (data: StageData) => void;
+};
+
+const ImageWidget: React.FC<ImageWidgetProps> = ({onCompleted}) => {
   const { getTranslation } = useI18n();
-  const [imageAssetList, setImageAssetList] = useState(() => {
-    if (getAllImageAsset().length) {
-      return [...getAllImageAsset()!];
-    }
-    setImageAsset(presetImageList);
-    return [...presetImageList];
-  });
+  const onDrop = useCallback((acceptedFiles: File[]) => {
+    acceptedFiles.forEach((file) => {
+      onCompleted({
+        id: nanoid(),
+        attrs: {
+          name: "imported image",
+          "data-item-type": "image",
+          x: 0,
+          y: 0,
+          width: 100,
+          height: 100,
+          src: URL.createObjectURL(file),
+          zIndex: 2,
+          brightness: 0,
+          draggable: true,
+          updatedAt: Date.now(),
+        },
+        className: "sample-image",
+        refRect: null,
+        children: [],
+      });
+    });
+  }, []);
+  const { getRootProps, getInputProps } = useDropzone({onDrop});
 
   const uploadImage = () => {
     const fileReader = new FileReader();
-    fileReader.onload = () => {
-      setImageAssetList((prev) => {
-        const result = [
-          {
-            type: "image",
-            id: nanoid(),
+    fileReader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        onCompleted({
+          id: nanoid(),
+          attrs: {
             name: "imported image",
-            src: fileReader.result as string,
+            "data-item-type": "image",
+            x: 0,
+            y: 0,
+            width: img.width,
+            height: img.height,
+            src: img.src,
+            zIndex: 0,
+            brightness: 0,
+            updatedAt: Date.now(),
           },
-          ...prev,
-        ];
-        setImageAsset(result);
-        return result;
-      });
+          className: "sample-image",
+          children: [],
+        });
+      };
+      img.src = e.target.result as string;
     };
     const file = document.createElement("input");
     file.type = "file";
@@ -54,7 +86,7 @@ const ImageWidget: React.FC = () => {
         Object.values((event.target as HTMLInputElement).files!).forEach(
           (file) => {
             fileReader.readAsDataURL(file);
-          }
+          },
         );
       }
     };
@@ -62,41 +94,50 @@ const ImageWidget: React.FC = () => {
   };
 
   return (
-    <Col className={[sizeStyles["mx-h-30vh"]].join(" ")}>
-      <Row>
-        <h6>
-          {getTranslation("widget", "image", "name")}
-          <Button
-            className={[
-              colorStyles.transparentDarkColorTheme,
-              borderStyles.none,
-              displayStyles["inline-block"],
-              sizeStyles.width25,
-              spaceStyles.p0,
-              spaceStyles.ml1rem,
-              alignStyles["text-left"],
-            ].join(" ")}
-            onClick={uploadImage}
+    <>
+      <Col
+        className={[sizeStyles["mx-h-30vh"]]
+          .concat([positionStyles["toolbar-section-container"]])
+          .join(" ")}
+      >
+        <Row>
+          <h6
+            className={[positionStyles["toolbar-section-h6"]].join(" ")}
+            style={{ marginTop: "15px", fontSize: "0.8rem" }}
           >
-            <i className="bi-plus" />
-          </Button>
-        </h6>
-      </Row>
-      <Row xs={2}>
-        {imageAssetList.map((_data) => (
-          <ImageThumbnail
-            key={`image-thumbnail-${_data.id}`}
-            data={{
-              id: _data.id,
-              src: _data.src ?? `find:${_data.id}`,
-              name: _data.name,
-              "data-item-type": _data.type,
-            }}
-            maxPx={80}
-          />
-        ))}
-      </Row>
-    </Col>
+            {getTranslation("widget", "uploadPhoto", "name")}
+          </h6>
+        </Row>
+        <div>
+          <section
+            className={["container"]
+              .concat([positionStyles["toolbar-upload-photo-dropzone"]])
+              .join(" ")}
+          >
+            <div
+              {...getRootProps({
+                className: "dropzone",
+                style: {
+                  background: "rgba(0,0,0,0)",
+                  alignItems: "center",
+                  margin: "0.2rem 0",
+                },
+              })}
+            >
+              <input {...getInputProps()}/>
+              <p className="m-auto">+</p>
+            </div>
+          </section>
+          <p style={{fontSize: "0.8rem", fontWeight: "300", fontStyle: "italic", color: "#9798A4", marginBottom: "0"}}>
+            (JPG,PNG,EPS,AI,& PDF)
+          </p>
+          <p style={{fontSize: "0.8rem", fontWeight: "300", fontStyle: "italic", color: "#9798A4", marginBottom: "0"}}>
+            Max 5 MB
+          </p>
+        </div>
+      </Col>
+      <hr className="m-0"></hr>
+    </>
   );
 };
 

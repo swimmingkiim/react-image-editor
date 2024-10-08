@@ -34,3 +34,14 @@
   background-color: transparent !important;
   color: var(--color-dark) !important;
 }
+
+.blackColor {
+  color: var(--color-dark) !important;
+}
+
+.navbar-buttongroup-tools {
+  background-color: #3D3D3D !important;
+  color: #CDCDCD !important;
+  border: none !important;
+}
+

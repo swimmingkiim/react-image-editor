@@ -1,0 +1,22 @@
+
+.text-accordion {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+.text-accordion h2 {
+    margin: auto 0;
+    padding: 0 .2rem;
+    font-size: 0.8667rem;
+    font-weight: bold;
+}
+
+.text-accordion .i-plus {
+    justify-self: end !important;
+}

@@ -12,10 +12,46 @@
   border-radius: 50%;
 }
 
+.noround {
+  border-radius: 0 !important;
+}
+
+.roundTopLeftSM {
+  /* border-top-left-radius: 0.4rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; */
+  border-radius: 0 !important;
+}
+
+.roundBottomLeftSM {
+  /* border-top-left-radius: 0rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0.4 !important;
+  border-bottom-right-radius: 0 !important; */
+}
+
 .roundTopSM {
   border-top-left-radius: 1rem !important;
   border-top-right-radius: 1rem !important;
 }
+
+.roundBottomLeftSM {
+  border-bottom-left-radius: 0.8rem !important;
+}
+
+.roundBottomRightSM {
+  border-bottom-right-radius: 0.8rem !important;
+}
+
+.roundBottomRightSM-5 {
+  border-bottom-right-radius: 0.5rem !important;
+}
+
+.roundTopLeftAndBottomLeftSM {
+  border-top-left-radius: 0.8rem !important;
+  border-bottom-left-radius: 0.8rem !important;
+};
 
 .roundLeftSM {
   border-start-start-radius: 1em;
@@ -123,6 +159,10 @@
   border: 1px solid var(--color-grey);
 }
 
+.all-black {
+  border: 1px solid var(--color-black);
+}
+
 .none {
   border: none !important;
 }
@@ -141,7 +181,7 @@
 }
 
 .colorDark {
-  border-color: var(--color-dark);
+  border-color: var(--color-dark) !important;
 }
 
 .colorWhite {

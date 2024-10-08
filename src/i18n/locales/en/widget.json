@@ -3,6 +3,18 @@
     "id": "image",
     "name": "Image"
   },
+  "uploadPhoto": {
+    "id": "uploadPhoto",
+    "name": "Upload Photo"
+  },
+  "browseClipart": {
+    "id": "browseClipart",
+    "name": "Browse Clipart"
+  },
+  "font": {
+    "id": "font",
+    "name": "Font"
+  },
   "colorPalette": {
     "id": "colorPalette",
     "name": "Color Palette",

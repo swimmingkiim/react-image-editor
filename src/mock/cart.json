@@ -1,0 +1,120 @@
+{
+  "_id": {
+    "$oid": "669e7f51705ffb021f91bade"
+  },
+  "uuid": "a68a31a0-664c-40e5-8ed6-f60bee8cdf41",
+  "products": [
+    {
+      "_id": {
+        "$oid": "669e7c2c96867fddab68f879"
+      },
+      "image": "https://www.dnaswag.ca/rshared/pdimages/1115123/4/prod.jpg?b=14431218&v=1720485250p0",
+      "product_code": "L350",
+      "product_name": "ATC PRO TEAM SHORT SLEEVE LADIES' TEE / ATCMC T-SHIRT À MANCHES COURTES PRO TEAM POUR FEMMES",
+      "product_details_url": "https://www.dnaswag.ca/manage/supplier_products/edit/219175928?_dnpps=W3siayI6ImJsYW5rX3Byb2R1Y3RzIiwicCI6eyJwZXJfcGFnZSI6MTUsInQiOjAsImMiOjAsInMiOjAsImIiOjAsInYiOjAsIm4iOiIiLCJkIjoiIn0sIm4iOnt9fV0%3D&pid=1115123&sid=170608",
+      "product_supplier": "SanMar Canada",
+      "product_group": "Apparel",
+      "blank": "$12.32",
+      "dtg": "$12.32",
+      "sub": "N/A",
+      "emb": "$19.27",
+      "scr": "$18.57",
+      "trf": "$14.32",
+      "dtf": "$17.32",
+      "uuid": "0369aecb-c21e-46da-8216-ddee2d7b8982",
+      "product_parts": [
+        {
+          "_id": {
+            "$oid": "669fc01a5edbe4659ff7333d"
+          },
+          "uuid": "ec034c86-9732-4444-a6e0-618b08bb4c93",
+          "image": "https://www.dnaswag.ca/pimages/1804688/7676278/12/1/prod.jpg?602053&pt=1404213&ts=1718290954",
+          "priority": 0,
+          "print_areas": [
+            {
+              "_id": {
+                "$oid": "66c887ee7965da5e7bd63ed7"
+              },
+              "x": 300,
+              "y": 200,
+              "w": 320,
+              "h": 480,
+              "priority": 1000
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "669fc01a5edbe4659ff7333e"
+          },
+          "uuid": "14f4f6c6-af20-43ec-9b22-52221431995d",
+          "image": "https://www.dnaswag.ca/pimages/1823588/7676278/12/1/prod.jpg?602053&pt=1404218&ts=1718290954",
+          "priority": 1
+        },
+        {
+          "_id": {
+            "$oid": "669fc01a5edbe4659ff7333f"
+          },
+          "uuid": "d794172d-27bb-4d04-9d9b-6063bb7aae62",
+          "image": "https://www.dnaswag.ca/pimages/1823593/7676278/12/1/prod.jpg?602053&pt=1400833&ts=1718290954",
+          "priority": 2
+        },
+        {
+          "_id": {
+            "$oid": "669fc01a5edbe4659ff73340"
+          },
+          "uuid": "c39fb4d8-34bc-4c86-b8de-615a4e74bed6",
+          "image": "https://www.dnaswag.ca/pimages/1823598/7676278/12/1/prod.jpg?602053&pt=1400838&ts=1718290954",
+          "priority": 3
+        }
+      ],
+      "image_id": {
+        "$oid": "66a1300c998e24b698dd05e8"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "669e7c2c96867fddab68f882"
+      },
+      "image": "https://www.dnaswag.ca/rshared/pdimages/1172468/4/prod.jpg?b=14431218&v=1720485250p0",
+      "product_code": "Y355",
+      "product_name": "ATC PRO TEAM YOUTH SHORTS",
+      "product_details_url": "https://www.dnaswag.ca/manage/supplier_products/edit/219175973?_dnpps=W3siayI6ImJsYW5rX3Byb2R1Y3RzIiwicCI6eyJwZXJfcGFnZSI6MTUsInQiOjAsImMiOjAsInMiOjAsImIiOjAsInYiOjAsIm4iOiIiLCJkIjoiIn0sIm4iOnt9fV0%3D&pid=1172468&sid=170608",
+      "product_supplier": "SanMar Canada",
+      "product_group": "Apparel",
+      "blank": "$21.54",
+      "dtg": "N/A",
+      "sub": "N/A",
+      "emb": "$28.49",
+      "scr": "$27.79",
+      "trf": "$23.54",
+      "dtf": "$26.54",
+      "uuid": "a84ce119-ac51-4907-a86a-8c50cb38b0b7",
+      "product_parts": [
+        {
+            "_id": {
+                "$oid": "669fc0615edbe4659ff73361"
+            },
+            "uuid": "523061fe-0ed6-4203-8158-2b69ff56ee87",
+            "image": "https://www.dnaswag.ca/pimages/4995023/8740543/12/1/prod.jpg?602063&pt=1404258&ts=1710529304",
+            "priority": 0,
+            "print_areas": [
+              {
+                "_id": {
+                  "$oid": "66c887ee7965da5e7bd63ed7"
+                },
+                "x": 280,
+                "y": 140,
+                "w": 180,
+                "h": 180,
+                "priority": 1000
+              }
+            ]
+        }
+      ],
+      "image_id": {
+        "$oid": "66a1300f998e24b698dd05f1"
+      }
+    }
+  ]
+}
